@@ -1,22 +1,80 @@
+body {
+    background-color: #2dac06;
+    background: linear-gradient(to top right, #2d7417, #6cd24c);
+    color: #445240;
+    font-size: 16px;
+}
 
+body > h1 {
+    display: none;
+}
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+a {
+    color: #445240;
+}
 
+a:hover,
+a:focus {
+    color: #445240;
+    text-decoration: underline;
+}
 
+h2 {
+    border-bottom: 1px solid #445240;
+}
 
+.basic-info {
+    padding: 20px 0;
+    color: #ecfccf;
+}
 
+.basic-info a {
+    color: #ecfccf;
+}
 
+.links {
+    padding: 20px 0;
+    background-color: #ecfccf;
+    background-color: rgba(236, 252, 207, 0.6);
+}
 
+.basic-info ul {
+    list-style-type: none;
+    padding-left: 0;
+}
 
+#my-name {
+    font-size: 2em;
+}
 
+@font-face {
+    font-family: 'Flaticon-fjyuu-000';
+    src: url("../fonts/flaticon.svg") format("svg");
+    src: url("../fonts/flaticon.ttf") format("truetype");
+}
 
+.flaticon {
+    display: inline-block;
+    font-family: "Flaticon-fjyuu-000";
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+}
 
+.flaticon-graduate:before {
+    content: "\e000";
+}
 
+.flaticon-pin:before {
+    content: "\e001";
+}
 
+.flaticon-wordpress:before {
+    content: "\e002";
+}
 
-
-
-
-
+.basic-info .flaticon {
+    width: 2em;
+    text-align: center;
+}
