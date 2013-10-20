@@ -1,9 +1,8 @@
 body {
     font-family: sans-serif;
-    background-color: #2dac06;
-    background: linear-gradient(to top right, #2d7417, #6cd24c);
-    color: #445240;
+    background-color: #ecfccf;
     font-size: 16px;
+    color: #607260;
 }
 
 h1,
@@ -31,32 +30,25 @@ body > h1 {
 }
 
 a {
-    color: #445240;
+    color: #5c905c;
 }
 
 a:hover,
 a:focus {
-    color: #445240;
+    color: #5c905c;
     text-decoration: underline;
 }
 
 h2 {
-    border-bottom: 1px solid #445240;
+    border-bottom: 1px solid #607260;
 }
 
 .basic-info {
     padding: 20px 0;
-    color: #ecfccf;
-}
-
-.basic-info a {
-    color: #ecfccf;
 }
 
 .links {
     padding: 20px 0;
-    background-color: #ecfccf;
-    background-color: rgba(236, 252, 207, 0.6);
 }
 
 .basic-info ul {
