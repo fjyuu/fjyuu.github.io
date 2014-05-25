@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Inkscapeで理系の作図</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="個人的なメモを書きます">
+    <link rel="canonical" href="http://fjyuu.info/blog/simple-inkscape">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+</head>
+
+
+    <body>
+
+    <header class="site-header">
+
+  <div class="wrap">
+
+    <a class="site-title" href="/">fjyuu.info</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
+          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
+            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
+            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
+            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/blog/">Blog</a>
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      <div class="post">
+
+  <header class="post-header">
+    <h1>Inkscapeで理系の作図</h1>
+    <p class="meta">Apr 14, 2013</p>
+  </header>
+
+  <article class="post-content">
+  <p>  研究室でのプレゼンや資料作成で使う図はいつも <a href="http://inkscape.org/">Inkscape</a> を使って描いています．
+</p>
+<p>
+  個人的に研究で使う図は，
+</p>
+<ul>
+<li>丸
+</li>
+<li>四角
+</li>
+<li>矢印
+</li>
+<li>文字
+</li>
+<li>数式
+</li>
+</ul>
+
+
+<p>
+  が描ければ，だいたいいけると思っています．Inkscapeのすべての機能を使いこなす必要なんてないですし，ましてやデザイナーさんが使うような高いソフトなんか必要ないです．
+</p>
+
+<div id="outline-container-1" class="outline-3">
+<h3 id="sec-1">導入</h3>
+<div class="outline-text-3" id="text-1">
+
+
+
+</div>
+
+<div id="outline-container-1-1" class="outline-4">
+<h4 id="sec-1-1">Linux</h4>
+<div class="outline-text-4" id="text-1-1">
+
+
+<p>
+    Linuxでは，たいていディストリビューションのリポジトリにパッケージが用意されていると思います．たとえば，
+</p>
+
+
+
+<pre class="src src-sh">$ sudo yum install inkscape
+</pre>
+
+
+<p>
+    とか
+</p>
+
+
+
+<pre class="src src-sh">$ sudo aptitude install inkscape
+</pre>
+
+
+<p>
+    でインストールできます．
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-4">
+<h4 id="sec-1-2">OS X</h4>
+<div class="outline-text-4" id="text-1-2">
+
+
+<p>
+    OS XでInkscapeを動かすには，X11が必要です．以下の手順でインストールします．
+</p>
+<ol>
+<li><a href="http://xquartz.macosforge.org/landing/">こちら</a> のページからXQuartをダウンロードして，インストールします．
+</li>
+<li>Inkscapeを <a href="http://inkscape.org/download/?lang=ja">こちら</a> からダウンロードしてきて，インストールします．
+</li>
+</ol>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-3">
+<h3 id="sec-2">図形を描く</h3>
+<div class="outline-text-3" id="text-2">
+
+
+<p>
+   使う際に気をつけておくことは，Inkscapeは <strong>単純な図形を組み合わせて    目的の図を描くソフト</strong> だということです．矢印スタンプとかニコちゃんマークとかそういうのはないのです．
+</p>
+<p>
+   たとえば矢印は，四角と三角を組み合わせて作りますし，
+</p>
+<img src="/img/arrow.png"  alt="file:///home/fjyuu/Dropbox/blog/arrow.png" />
+<p>
+   吹き出しも，四角と三角でできます．
+</p>
+<img src="/img/balloon.png"  alt="file:///home/fjyuu/Dropbox/blog/balloon.png" />
+<p>
+   以下のチュートリアルをやれば，十分目的の図形が描けるようになると思います．
+</p>
+<ul>
+<li><a href="http://news.mynavi.jp/articles/2008/05/02/inkscape/index.html">ゼロからはじめるInkscape &#8211; Illustratorライクな無料ドローツール</a>
+</li>
+</ul>
+
+
+<p>
+   他にもInkscapeの使い方をわかりやすく解説したサイト様がたくさんあるので，それらを参考にするといいと思います．
+</p>
+
+</div>
+
+<div id="outline-container-2-1" class="outline-4">
+<h4 id="sec-2-1">個人的によく使う機能</h4>
+<div class="outline-text-4" id="text-2-1">
+
+
+<dl>
+<dt>パスの統合</dt><dd>複数のオブジェクトを組み合わせるときに使います
+</dd>
+<dt>オブジェクトのグループ化</dt><dd>複数のオブジェクトをひとつのオブジェクトとして扱いたいときに使います
+</dd>
+<dt>オブジェクトの整列</dt><dd>オブジェクトを揃えるときに使います
+</dd>
+<dt>フィル/ストロークの設定</dt><dd>線の種類や太さ，色などを変えるときに使います
+</dd>
+</dl>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-3">
+<h3 id="sec-3">数式を描く</h3>
+<div class="outline-text-3" id="text-3">
+
+
+<p>
+   理系の作図では，図の中に数式を含むこともあると思います．Inkscapeには <strong>LaTeXの数式</strong> をオブジェクトとして取り込む機能があります．この機能を使うには，
+</p>
+<ul>
+<li>LaTeX環境
+</li>
+<li>pstoedit
+</li>
+</ul>
+
+
+<p>
+   が必要です．
+</p>
+
+</div>
+
+<div id="outline-container-3-1" class="outline-4">
+<h4 id="sec-3-1">LaTeX環境の構築</h4>
+<div class="outline-text-4" id="text-3-1">
+
+
+<p>
+    LaTeX環境の構築については，ググるといろいろ情報が出てくるのであまりここでは詳しく述べません．
+</p>
+<p>
+    Linuxでは， <a href="http://www.tug.org/texlive/acquire-netinstall.html">TeXLive公式</a> からTeXLiveをインストールするのがオススメです．また，TeXLiveがディストリビューションのレポジトリにある場合はそれを利用するのもお手軽かと思います．
+</p>
+<p>
+    OS Xでは， <a href="http://tug.org/mactex/">MacTeX</a> を入れたりすればいいと思います．
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-4">
+<h4 id="sec-3-2">pstoedit</h4>
+<div class="outline-text-4" id="text-3-2">
+
+
+<p>
+    LaTeXの数式をSVG形式にするためにpstoeditが必要です．
+</p>
+<p>
+    Linuxでは，
+</p>
+
+
+
+<pre class="src src-sh">$ sudo yum install pstoedit
+</pre>
+
+
+<p>
+    とか
+</p>
+
+
+
+<pre class="src src-sh">$ sudo aptitude install pstoedit
+</pre>
+
+
+<p>
+    でインストールできます．
+</p>
+<p>
+    OS Xでは，以下の手順でインストールします．
+</p>
+<ol>
+<li><a href="http://mxcl.github.io/homebrew/">Homebrew</a> をインストールして使えるようにします．インストール方法については， <a href="http://tools4hack.santalab.me/howto-mountainlion-install-homebrew.html">こちら</a> とかが参考になります．
+</li>
+<li>以下を実行して，lxmlとpstoeditをインストールします．
+
+
+
+<pre class="src src-sh">$ sudo easy_install lxml
+$ brew install pstoedit
+</pre>
+
+</li>
+</ol>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3-3" class="outline-4">
+<h4 id="sec-3-3">LaTeX数式を使う</h4>
+<div class="outline-text-4" id="text-3-3">
+
+
+<p>
+    LaTeX環境とpstoeditがそろえば，メニューから <strong>[エクステンション]→[レンダリング]→[Latex 数式]</strong>
+    で以下のように数式をオブジェクトとして取り込めます．英語メニューの場合は，
+    <strong>[Extensions]→[Render]→[LaTeX formula]</strong> です．
+</p>
+<img src="/img/inkscape-latex.png"  alt="file:///home/fjyuu/Dropbox/blog/inkscape-latex.png" />
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-3">
+<h3 id="sec-4">画像のエクスポート</h3>
+<div class="outline-text-3" id="text-4">
+
+
+<p>
+   LaTeXで図を使いたいときなど，PDF形式やEPS形式で保存したい場合があると思います．
+</p>
+<p>
+   Inkscapeでは，普通に保存するとSVG形式で保存されます．他の形式にしたい場合は， <strong>[ファイル]→[コピーを保存]</strong> から，形式を指定して画像を保存することができます．
+</p>
+<p>
+   PNG形式などビットマップ形式で出力したい場合は， <strong>[ファイル]→[ビットマップにエクスポート]</strong>
+   から，サイズなどを指定して保存します．
+</p>
+
+</div>
+
+<div id="outline-container-4-1" class="outline-4">
+<h4 id="sec-4-1">パラパラマンガ的な画像を作る</h4>
+<div class="outline-text-4" id="text-4-1">
+
+
+<p>
+     スライド資料などで，パラパラマンガ的に画像を使いたい場合，すべての画像の大きさが揃っているとラクです．
+</p>
+<p>
+     Inkscapeでは，ページサイズを調整して，画像保存のときに <strong>エクスポート領域をページにする</strong>
+     ことで，出力される画像の大きさを制御できます．
+</p>
+<p>
+     ページサイズの調整は， <strong>[ファイル]→[ドキュメントの設定]</strong> から可能です．すべてのオブジェクトが入るように，自動でサイズ調整をすることもできます．
+</p>
+<p>
+     また，パラパラマンガ画像のように，似た画像を複数作るときには， <strong>レイヤー機能</strong>
+     を使うと便利です．
+</p>
+</div>
+</div>
+
+  </article>
+
+</div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-21456779-1', 'fjyuu.info');
+  ga('send', 'pageview');
+</script>
+
+
+    </body>
+</html>

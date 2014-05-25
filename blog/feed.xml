@@ -211,6 +211,299 @@ $ sudo cpanm --sudo Filesys::Notify::KQueue
       </item>
     
       <item>
+        <title>Inkscapeで理系の作図</title>
+        <description>&lt;p&gt;  研究室でのプレゼンや資料作成で使う図はいつも &lt;a href=&quot;http://inkscape.org/&quot;&gt;Inkscape&lt;/a&gt; を使って描いています．
+&lt;/p&gt;
+&lt;p&gt;
+  個人的に研究で使う図は，
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;丸
+&lt;/li&gt;
+&lt;li&gt;四角
+&lt;/li&gt;
+&lt;li&gt;矢印
+&lt;/li&gt;
+&lt;li&gt;文字
+&lt;/li&gt;
+&lt;li&gt;数式
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;
+  が描ければ，だいたいいけると思っています．Inkscapeのすべての機能を使いこなす必要なんてないですし，ましてやデザイナーさんが使うような高いソフトなんか必要ないです．
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-1&quot;&gt;導入&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-1&quot;&gt;
+
+
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-1-1&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;sec-1-1&quot;&gt;Linux&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-1-1&quot;&gt;
+
+
+&lt;p&gt;
+    Linuxでは，たいていディストリビューションのリポジトリにパッケージが用意されていると思います．たとえば，
+&lt;/p&gt;
+
+
+
+&lt;pre class=&quot;src src-sh&quot;&gt;$ sudo yum install inkscape
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+    とか
+&lt;/p&gt;
+
+
+
+&lt;pre class=&quot;src src-sh&quot;&gt;$ sudo aptitude install inkscape
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+    でインストールできます．
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-1-2&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;sec-1-2&quot;&gt;OS X&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-1-2&quot;&gt;
+
+
+&lt;p&gt;
+    OS XでInkscapeを動かすには，X11が必要です．以下の手順でインストールします．
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://xquartz.macosforge.org/landing/&quot;&gt;こちら&lt;/a&gt; のページからXQuartをダウンロードして，インストールします．
+&lt;/li&gt;
+&lt;li&gt;Inkscapeを &lt;a href=&quot;http://inkscape.org/download/?lang=ja&quot;&gt;こちら&lt;/a&gt; からダウンロードしてきて，インストールします．
+&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-2&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2&quot;&gt;図形を描く&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2&quot;&gt;
+
+
+&lt;p&gt;
+   使う際に気をつけておくことは，Inkscapeは &lt;strong&gt;単純な図形を組み合わせて    目的の図を描くソフト&lt;/strong&gt; だということです．矢印スタンプとかニコちゃんマークとかそういうのはないのです．
+&lt;/p&gt;
+&lt;p&gt;
+   たとえば矢印は，四角と三角を組み合わせて作りますし，
+&lt;/p&gt;
+&lt;img src=&quot;/img/arrow.png&quot;  alt=&quot;file:///home/fjyuu/Dropbox/blog/arrow.png&quot; /&gt;
+&lt;p&gt;
+   吹き出しも，四角と三角でできます．
+&lt;/p&gt;
+&lt;img src=&quot;/img/balloon.png&quot;  alt=&quot;file:///home/fjyuu/Dropbox/blog/balloon.png&quot; /&gt;
+&lt;p&gt;
+   以下のチュートリアルをやれば，十分目的の図形が描けるようになると思います．
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://news.mynavi.jp/articles/2008/05/02/inkscape/index.html&quot;&gt;ゼロからはじめるInkscape &amp;#8211; Illustratorライクな無料ドローツール&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;
+   他にもInkscapeの使い方をわかりやすく解説したサイト様がたくさんあるので，それらを参考にするといいと思います．
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-2-1&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;sec-2-1&quot;&gt;個人的によく使う機能&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-2-1&quot;&gt;
+
+
+&lt;dl&gt;
+&lt;dt&gt;パスの統合&lt;/dt&gt;&lt;dd&gt;複数のオブジェクトを組み合わせるときに使います
+&lt;/dd&gt;
+&lt;dt&gt;オブジェクトのグループ化&lt;/dt&gt;&lt;dd&gt;複数のオブジェクトをひとつのオブジェクトとして扱いたいときに使います
+&lt;/dd&gt;
+&lt;dt&gt;オブジェクトの整列&lt;/dt&gt;&lt;dd&gt;オブジェクトを揃えるときに使います
+&lt;/dd&gt;
+&lt;dt&gt;フィル/ストロークの設定&lt;/dt&gt;&lt;dd&gt;線の種類や太さ，色などを変えるときに使います
+&lt;/dd&gt;
+&lt;/dl&gt;
+
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-3&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-3&quot;&gt;数式を描く&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-3&quot;&gt;
+
+
+&lt;p&gt;
+   理系の作図では，図の中に数式を含むこともあると思います．Inkscapeには &lt;strong&gt;LaTeXの数式&lt;/strong&gt; をオブジェクトとして取り込む機能があります．この機能を使うには，
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LaTeX環境
+&lt;/li&gt;
+&lt;li&gt;pstoedit
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;
+   が必要です．
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-3-1&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;sec-3-1&quot;&gt;LaTeX環境の構築&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-3-1&quot;&gt;
+
+
+&lt;p&gt;
+    LaTeX環境の構築については，ググるといろいろ情報が出てくるのであまりここでは詳しく述べません．
+&lt;/p&gt;
+&lt;p&gt;
+    Linuxでは， &lt;a href=&quot;http://www.tug.org/texlive/acquire-netinstall.html&quot;&gt;TeXLive公式&lt;/a&gt; からTeXLiveをインストールするのがオススメです．また，TeXLiveがディストリビューションのレポジトリにある場合はそれを利用するのもお手軽かと思います．
+&lt;/p&gt;
+&lt;p&gt;
+    OS Xでは， &lt;a href=&quot;http://tug.org/mactex/&quot;&gt;MacTeX&lt;/a&gt; を入れたりすればいいと思います．
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-3-2&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;sec-3-2&quot;&gt;pstoedit&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-3-2&quot;&gt;
+
+
+&lt;p&gt;
+    LaTeXの数式をSVG形式にするためにpstoeditが必要です．
+&lt;/p&gt;
+&lt;p&gt;
+    Linuxでは，
+&lt;/p&gt;
+
+
+
+&lt;pre class=&quot;src src-sh&quot;&gt;$ sudo yum install pstoedit
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+    とか
+&lt;/p&gt;
+
+
+
+&lt;pre class=&quot;src src-sh&quot;&gt;$ sudo aptitude install pstoedit
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+    でインストールできます．
+&lt;/p&gt;
+&lt;p&gt;
+    OS Xでは，以下の手順でインストールします．
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://mxcl.github.io/homebrew/&quot;&gt;Homebrew&lt;/a&gt; をインストールして使えるようにします．インストール方法については， &lt;a href=&quot;http://tools4hack.santalab.me/howto-mountainlion-install-homebrew.html&quot;&gt;こちら&lt;/a&gt; とかが参考になります．
+&lt;/li&gt;
+&lt;li&gt;以下を実行して，lxmlとpstoeditをインストールします．
+
+
+
+&lt;pre class=&quot;src src-sh&quot;&gt;$ sudo easy_install lxml
+$ brew install pstoedit
+&lt;/pre&gt;
+
+&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-3-3&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;sec-3-3&quot;&gt;LaTeX数式を使う&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-3-3&quot;&gt;
+
+
+&lt;p&gt;
+    LaTeX環境とpstoeditがそろえば，メニューから &lt;strong&gt;[エクステンション]→[レンダリング]→[Latex 数式]&lt;/strong&gt;
+    で以下のように数式をオブジェクトとして取り込めます．英語メニューの場合は，
+    &lt;strong&gt;[Extensions]→[Render]→[LaTeX formula]&lt;/strong&gt; です．
+&lt;/p&gt;
+&lt;img src=&quot;/img/inkscape-latex.png&quot;  alt=&quot;file:///home/fjyuu/Dropbox/blog/inkscape-latex.png&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-4&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-4&quot;&gt;画像のエクスポート&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-4&quot;&gt;
+
+
+&lt;p&gt;
+   LaTeXで図を使いたいときなど，PDF形式やEPS形式で保存したい場合があると思います．
+&lt;/p&gt;
+&lt;p&gt;
+   Inkscapeでは，普通に保存するとSVG形式で保存されます．他の形式にしたい場合は， &lt;strong&gt;[ファイル]→[コピーを保存]&lt;/strong&gt; から，形式を指定して画像を保存することができます．
+&lt;/p&gt;
+&lt;p&gt;
+   PNG形式などビットマップ形式で出力したい場合は， &lt;strong&gt;[ファイル]→[ビットマップにエクスポート]&lt;/strong&gt;
+   から，サイズなどを指定して保存します．
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-4-1&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;sec-4-1&quot;&gt;パラパラマンガ的な画像を作る&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-4-1&quot;&gt;
+
+
+&lt;p&gt;
+     スライド資料などで，パラパラマンガ的に画像を使いたい場合，すべての画像の大きさが揃っているとラクです．
+&lt;/p&gt;
+&lt;p&gt;
+     Inkscapeでは，ページサイズを調整して，画像保存のときに &lt;strong&gt;エクスポート領域をページにする&lt;/strong&gt;
+     ことで，出力される画像の大きさを制御できます．
+&lt;/p&gt;
+&lt;p&gt;
+     ページサイズの調整は， &lt;strong&gt;[ファイル]→[ドキュメントの設定]&lt;/strong&gt; から可能です．すべてのオブジェクトが入るように，自動でサイズ調整をすることもできます．
+&lt;/p&gt;
+&lt;p&gt;
+     また，パラパラマンガ画像のように，似た画像を複数作るときには， &lt;strong&gt;レイヤー機能&lt;/strong&gt;
+     を使うと便利です．
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sun, 14 Apr 2013 00:00:00 +0900</pubDate>
+        <link>http://fjyuu.info/blog/simple-inkscape</link>
+        <guid isPermaLink="true">http://fjyuu.info/blog/simple-inkscape</guid>
+      </item>
+    
+      <item>
         <title>org-modeで日本語PDFを出力する</title>
         <description>&lt;p&gt;  &lt;a href=&quot;http://fjyuu.info/platexpdf/&quot;&gt;platex して dvipdfmx するスクリプト&lt;/a&gt;が奥村先生の&lt;a href=&quot;http://oku.edu.mie-u.ac.jp/~okumura/texwiki/?Make&quot;&gt;TeX Wiki&lt;/a&gt;からリンクされている…！
 &lt;/p&gt;
@@ -804,23 +1097,6 @@ org-mode version 8.xでは，上記のElispが動きません．以下に書き�
         <pubDate>Sun, 24 Feb 2013 00:00:00 +0900</pubDate>
         <link>http://fjyuu.info/blog/remove-japanese-spaces</link>
         <guid isPermaLink="true">http://fjyuu.info/blog/remove-japanese-spaces</guid>
-      </item>
-    
-      <item>
-        <title>Elispをまとめてバイトコンパイル</title>
-        <description>&lt;p&gt;ElispをコンパイルするとEmacsの起動が速くなるらしい．コンパイルの方法としては，以下があるみたい．&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;M-x byte-compile-file&lt;/code&gt;でファイルを指定してコンパイル&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-u 0 M-x byte-recompile-directory&lt;/code&gt;でディレクトリ以下の*.elをコンパイル&lt;/li&gt;
-&lt;li&gt;コマンドラインから&lt;code&gt;emacs --quick --batch -f batch-byte-compile hoge.el&lt;/code&gt;でコンパイル（-Lオプションでロードパスを追加）&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;2番の方法がラクでいいですね．&lt;/p&gt;
-</description>
-        <pubDate>Fri, 31 Aug 2012 00:00:00 +0900</pubDate>
-        <link>http://fjyuu.info/blog/elisp-compilation</link>
-        <guid isPermaLink="true">http://fjyuu.info/blog/elisp-compilation</guid>
       </item>
     
   </channel>
