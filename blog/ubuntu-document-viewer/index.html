@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>fjyuu.info</title>
+    <title>Ubuntuのドキュメント・ビューアをコマンドラインから</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="個人的なメモを書きます">
-    <link rel="canonical" href="http://fjyuu.info/">
+    <link rel="canonical" href="http://fjyuu.info/blog/ubuntu-document-viewer">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
@@ -47,35 +47,24 @@
 
     <div class="page-content">
       <div class="wrap">
-      <div class="my-info">
-  <h1>About Me</h1>
+      <div class="post">
 
-  <ul>
-    <li><span class="flaticon flaticon-name"></span><span id="my-name">Yuki Fujii (fjyuu, ふじゅ)</span></li>
-    <li><span class="flaticon flaticon-pin"></span>Tokyo, Japan</li>
-  </ul>
+  <header class="post-header">
+    <h1>Ubuntuのドキュメント・ビューアをコマンドラインから</h1>
+    <p class="meta">May 12, 2011</p>
+  </header>
 
-  <h2>Social Accounts</h2>
-  <ul>
-    <li><span class="flaticon flaticon-twitter"></span><a href="//twitter.com/fjyuu">Twitter</a></li>
-    <li><span class="flaticon flaticon-google-plus"></span><a href="//plus.google.com/103212612060366481151/posts">Google+</a></li>
-    <li><span class="flaticon flaticon-github"></span><a href="//github.com/fjyuu">GitHub</a></li>
-  </ul>
+  <article class="post-content">
+  <p>Ubuntuのドキュメント・ビューアの正体はEvinceなので，以下のようにコマンドラインから呼び出せます．</p>
 
-  <h2>Products</h2>
-  <h3>Web Service</h3>
-  <ul>
-    <li><a href="http://graphg.net/">GraphG - ネットワークトポロジーを見る</a></li>
-    <li><a href="//byn.vc/">URL伸縮サービス Biyoon</a></li>
-    <li><a href="//mbranking.hikae.me/">地上波映画ボットRTランキング</a></li>
-  </ul>
-  <h3>Twitter Bot</h3>
-  <ul>
-    <li><a href="//twitter.com/uksk_kun">人工無脳 うこさこくん</a></li>
-    <li><a href="//fjyuu.info/movie_bot/">映画お知らせボット</a></li>
-  </ul>
+<pre class="src src-sh">$ evince hoge.pdf
+</pre>
+
+<p>AdobeReaderと違って，EvinceはPDFファイルをロックしません．ファイルを開いたままそのファイルを更新できるので，TeXをPDF出力して確認したりするときには便利です．</p>
+
+  </article>
+
 </div>
-
       </div>
     </div>
 

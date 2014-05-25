@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>openSUSE と OSX で One Shot Modifier</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="個人的なメモを書きます">
+    <link rel="canonical" href="http://fjyuu.info/blog/opensuse-osx-one-shot-modifier">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+</head>
+
+
+    <body>
+
+    <header class="site-header">
+
+  <div class="wrap">
+
+    <a class="site-title" href="/">fjyuu.info</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
+          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
+            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
+            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
+            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/blog/">Blog</a>
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      <div class="post">
+
+  <header class="post-header">
+    <h1>openSUSE と OSX で One Shot Modifier</h1>
+    <p class="meta">Feb 28, 2013</p>
+  </header>
+
+  <article class="post-content">
+  <p>  openSUSE 12.2とOSX Mountain Lionに， One Shot Modifierを導入したときのメモです．
+</p>
+
+<div id="outline-container-1" class="outline-3">
+<h3 id="sec-1">One Shot Modifier</h3>
+<div class="outline-text-3" id="text-1">
+
+
+<p>
+   <em>One Shot Modifier</em> とは，あるキーXを押したまま別のキーを押したときと，あるキーXを単体で押したときとで，挙動を変える設定のことです．有名なOne Shot Modifierとして， <a href="http://hp.vector.co.jp/authors/VA002116/sands/">Space and Shift (SandS)</a> というものがあります．これは，Spaceキーを他のキーと同時に押すことで，SpaceキーをShiftキーとして使うことができる設定です．大文字のアルファベットを打つのが非常にラクになります．欠点は，Spaceを押した瞬間ではなく，キーがもとに戻ったときにSpaceが入力されるので，タイプにひっかかりを感じることでしょうか．
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-3">
+<h3 id="sec-2">openSUSEでOne Shot Modifier - At home modifier</h3>
+<div class="outline-text-3" id="text-2">
+
+
+<p>
+   At home modifierは，ドライバを置き換えることで，LinuxでOne Shot Modifierを実現してくれます．
+</p>
+<ul>
+<li><a href="http://gitorious.org/at-home-modifier">At home modifier - Gitorious</a>
+</li>
+</ul>
+
+
+<p>
+   以下，openSUSE 12.2に導入したときのメモです．
+</p>
+<p>
+   <code>git clone</code> するかダウンロードしてきて，
+</p>
+
+
+
+<pre class="src src-sh">$ sudo zypper install xorg-x11-server-sdk libudev-devel
+$ ./autogen.sh
+$ ./configure
+$ make
+$ sudo paco -D make install
+</pre>
+
+
+<p>
+   これで， <code>/usr/local/lib64/xorg/modules/input</code> 以下にevdev_drv.soがインストールされます（最後の行では <a href="http://paco.sourceforge.net/">paco</a> を使ってます）．このevdev_drv.soを，既存の
+   <code>/usr/lib64/xorg/modules/input/evdev_drv.so</code> より優先させたかったのですが，スマートな方法がわからなかったのでゴリ押ししました．
+</p>
+
+
+
+<pre class="src src-sh">$ cd /usr/lib64/xorg/modules/input
+$ sudo mv evdev_drv.so evdev_drv.so.bak
+$ sudo ln -s /usr/local/lib64/xorg/modules/input/evdev_drv.so ./
+</pre>
+
+
+<p>
+   つづいて， <code>/usr/share/X11/xorg.conf.d/10-evdev.conf</code> に以下のようにオプションを書き加えます． <code>+</code> が追加した行です．
+</p>
+
+
+
+<pre class="src src-diff"><span class="org-diff-context">   Section "InputClass"</span>
+<span class="org-diff-context">           Identifier "evdev keyboard catchall"</span>
+<span class="org-diff-context">           MatchIsKeyboard "on"</span>
+<span class="org-diff-context">           MatchDevicePath "/dev/input/event*"</span>
+<span class="org-diff-context">           Driver "evdev"</span>
+<span class="org-diff-indicator-added">+</span><span class="org-diff-added">          # One Shot Modifier</span>
+<span class="org-diff-indicator-added">+</span><span class="org-diff-added">          # 65:&lt;space&gt; 50:&lt;shift_L&gt;</span>
+<span class="org-diff-indicator-added">+</span><span class="org-diff-added">          # 48:quote(') 64:&lt;alt_L&gt;</span>
+<span class="org-diff-indicator-added">+</span><span class="org-diff-added">          Option "TransMod" "65:50 48:64"</span>
+<span class="org-diff-context">   EndSection</span>
+</pre>
+
+
+<p>
+   ここでは，
+</p>
+<ul>
+<li>SpaceキーをShiftキーとしても使う（SandS）
+</li>
+<li>Quote(')キーをAltとしても使う
+</li>
+</ul>
+
+
+<p>
+   という設定を記述しています．QuoteキーをAltにしてるのは，こうすると，右小指の右隣がAltになり（英語配列），Emacsを使うときにいい感じになるからです．
+</p>
+<p>
+   設定を実際に反映させるためには，Xを再起動する必要があります．
+</p>
+<p>
+   このように，あらゆるキーをOne Shot Modifierキーにすることができます．キーコードが分からないときは <code>xev</code> コマンドで確認しましょう．
+</p>
+<p>
+   他にも細かく設定できる項目があるので，詳しくは <a href="http://gitorious.org/at-home-modifier/at-home-modifier/blobs/raw/master/README">README</a> を見てください．
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-3">
+<h3 id="sec-3">OSX (Mac)でOne Shot Modifier - KeyRemap4MacBook</h3>
+<div class="outline-text-3" id="text-3">
+
+
+<p>
+   OS Xでは， <a href="http://pqrs.org/macosx/keyremap4macbook/index.html.ja">KeyRemap4MacBook</a> というソフトにより，One Shot Modifierを実現出来ます．SandSは，デフォルトで用意されているので，以下のページで紹介されているように簡単に設定できます．
+</p>
+<ul>
+<li><a href="http://pqrs.org/macosx/doc/keyboard/">Mac OS X で SandS (Space and Shift) を使う</a>
+</li>
+</ul>
+
+
+<p>
+   QuoteキーをAltにする設定などは用意されていないので，自分で作成する必要があります．
+</p>
+<p>
+   Misc &amp; Uninstallタブの中にCustom Settingという項目があるので，そこのprivate.xmlをいじることにより，独自のキー割り当てを作成できます．QuoteキーをOptionキーとしても使う設定は以下のようになります．
+</p>
+
+
+
+<pre class="src src-xml"><span class="org-nxml-processing-instruction-delimiter">&lt;?</span><span class="org-nxml-processing-instruction-target">xml</span> <span class="org-nxml-attribute-local-name">version</span>=<span class="org-nxml-attribute-value-delimiter">"</span><span class="org-nxml-attribute-value">1.0</span><span class="org-nxml-attribute-value-delimiter">"</span><span class="org-nxml-processing-instruction-delimiter">?&gt;</span>
+<span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-element-local-name">root</span><span class="org-nxml-tag-delimiter">&gt;</span>
+
+  <span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-element-local-name">item</span><span class="org-nxml-tag-delimiter">&gt;</span>
+    <span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-element-local-name">name</span><span class="org-nxml-tag-delimiter">&gt;</span><span class="org-nxml-text">One Shot Modifier</span><span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-tag-slash">/</span><span class="org-nxml-element-local-name">name</span><span class="org-nxml-tag-delimiter">&gt;</span>
+    <span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-element-local-name">item</span><span class="org-nxml-tag-delimiter">&gt;</span>
+      <span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-element-local-name">name</span><span class="org-nxml-tag-delimiter">&gt;</span><span class="org-nxml-text">Quote(') to Option_R Key</span><span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-tag-slash">/</span><span class="org-nxml-element-local-name">name</span><span class="org-nxml-tag-delimiter">&gt;</span>
+      <span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-element-local-name">appendix</span><span class="org-nxml-tag-delimiter">&gt;</span><span class="org-nxml-text">(+ When you type Quote only, send Quote)</span><span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-tag-slash">/</span><span class="org-nxml-element-local-name">appendix</span><span class="org-nxml-tag-delimiter">&gt;</span>
+      <span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-element-local-name">appendix</span><span class="org-nxml-tag-delimiter">&gt;</span><span class="org-nxml-text">Fn+Quote to Quote</span><span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-tag-slash">/</span><span class="org-nxml-element-local-name">appendix</span><span class="org-nxml-tag-delimiter">&gt;</span>
+      <span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-element-local-name">identifier</span><span class="org-nxml-tag-delimiter">&gt;</span><span class="org-nxml-text">fjyuu.quote2optionR_quote_fnquote</span><span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-tag-slash">/</span><span class="org-nxml-element-local-name">identifier</span><span class="org-nxml-tag-delimiter">&gt;</span>
+      <span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-element-local-name">autogen</span><span class="org-nxml-tag-delimiter">&gt;</span><span class="org-nxml-text">__KeyToKey__ KeyCode::QUOTE, ModifierFlag::FN, KeyCode::QUOTE</span><span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-tag-slash">/</span><span class="org-nxml-element-local-name">autogen</span><span class="org-nxml-tag-delimiter">&gt;</span>
+      <span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-element-local-name">autogen</span><span class="org-nxml-tag-delimiter">&gt;</span><span class="org-nxml-text">__KeyOverlaidModifier__ KeyCode::QUOTE, KeyCode::OPTION_R, KeyCode::QUOTE</span><span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-tag-slash">/</span><span class="org-nxml-element-local-name">autogen</span><span class="org-nxml-tag-delimiter">&gt;</span>
+    <span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-tag-slash">/</span><span class="org-nxml-element-local-name">item</span><span class="org-nxml-tag-delimiter">&gt;</span>
+  <span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-tag-slash">/</span><span class="org-nxml-element-local-name">item</span><span class="org-nxml-tag-delimiter">&gt;</span>
+
+<span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-tag-slash">/</span><span class="org-nxml-element-local-name">root</span><span class="org-nxml-tag-delimiter">&gt;</span>
+</pre>
+
+
+<p>
+   このように設定を追加していけば，OS XでもあらゆるキーをOne Shot Modifierに設定できます．
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-3">
+<h3 id="sec-4">ちなみにWindowsでは</h3>
+<div class="outline-text-3" id="text-4">
+
+
+<p>
+   試していませんが，ちょっと調べたところ，Windowsでは
+</p>
+<ul>
+<li><a href="http://sourceforge.jp/projects/yamy/">yamy</a>
+</li>
+<li><a href="http://www.appletkan.com/nodoka.htm">のどか</a>
+</li>
+</ul>
+
+
+<p>
+   などのソフトでOne Shot Modifierを実現できるみたいです．
+</p></div>
+</div>
+
+  </article>
+
+</div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+</footer>
+
+
+    </body>
+</html>

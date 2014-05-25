@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fjyuu.info</title>
+    <description>個人的なメモを書きます</description>
+    <link>http://fjyuu.info/</link>
+    <atom:link href="http://fjyuu.info/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>シンプルな修士論文のLaTeXテンプレート</title>
+        <description>&lt;p&gt;
+自分が修士論文を書いたときに使ったLaTeXテンプレートです．
+&lt;/p&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/fjyuu/master-thesis-template&quot;&gt;master-thesis-template - GitHub&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+特徴は，
+&lt;/p&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;文字コードはUTF-8
+&lt;/li&gt;
+&lt;li&gt;ドキュメントクラスはjsbookで，余白や文字数などの細かい設定はしていない（デフォルトのまま）
+&lt;/li&gt;
+&lt;li&gt;章ごとにTeXファイルを分割してる
+&lt;/li&gt;
+&lt;li&gt;トップディレクトリにあまりファイルを置かないようにした（図とか分割TeXファイルはディレクトリの下に配置）
+&lt;/li&gt;
+&lt;li&gt;参考文献にはBibTeXを使用し，登場順に列挙するようにした
+&lt;/li&gt;
+&lt;li&gt;定義，補題，証明などの環境を用意した（ntheoremを使用）
+&lt;/li&gt;
+&lt;li&gt;hyperrefを使ってPDFにしおりをつける
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+とかです．コンパイルの方法とかはREADMEを見てください．PDFを作成すると以下のようになります．
+&lt;/p&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://dl.dropboxusercontent.com/u/608308/master-thesis-template/thesis.pdf&quot;&gt;見本（PDFファイル）&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;参考にさせていただいたページ&lt;/h3&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;http://d.hatena.ne.jp/yosshi71jp/20101210/1292005429&quot;&gt;卒論をTeXフォーマットなしから書くためのtips - シコウサクゴ（）&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 08 Feb 2014 00:00:00 +0900</pubDate>
+        <link>http://fjyuu.info/blog/master-thesis-template</link>
+        <guid isPermaLink="true">http://fjyuu.info/blog/master-thesis-template</guid>
+      </item>
+    
+      <item>
+        <title>NetworkX と D3.js を組み合わせてグラフで遊べるサービス作ってみた</title>
+        <description>&lt;div class=&quot;figure&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;http://graphg.net/&quot;&gt;&lt;img src=&quot;/img/wpid-ss.png&quot; alt=&quot;wpid-ss.png&quot; /&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+いろんなグラフを作って遊べるサービス &lt;a href=&quot;http://graphg.net/&quot;&gt;GraphG&lt;/a&gt; というものをリリースしました．
+&lt;/p&gt;
+
+&lt;p&gt;
+このサービスは以下の素晴らしいライブラリを組み合わせたものです．
+&lt;/p&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;http://networkx.github.io/&quot;&gt;NetworkX&lt;/a&gt; ： Pythonの高機能グラフライブラリ
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://d3js.org/&quot;&gt;D3.js&lt;/a&gt; ： データ可視化のためのJavaScriptライブラリ
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+NetworkXの&lt;a href=&quot;http://networkx.github.io/documentation/latest/reference/generators.html&quot;&gt;Graph Generator&lt;/a&gt;でグラフの構造を作ってから，描画はD3.jsにまかせています．
+&lt;/p&gt;
+
+&lt;p&gt;
+描画には，D3.jsの&lt;a href=&quot;https://github.com/mbostock/d3/wiki/Force-Layout&quot;&gt;Force Layout&lt;/a&gt;というものを利用しています．これは，グラフ描画アルゴリズムの一つで，&lt;a href=&quot;http://byn.vc/myetr&quot;&gt;力学モデル（Wikipedia）&lt;/a&gt;と呼ばれるそうです．頂点をぐいぐい引っ張ったりすることができます．
+&lt;/p&gt;
+
+&lt;h3&gt;作った理由&lt;/h3&gt;
+
+&lt;p&gt;
+グラフの定義を，数式や言葉で説明されても分かりにくいからです．実際につくってみる事で直感的に理解することができるはず！
+&lt;/p&gt;
+
+&lt;h3&gt;予定&lt;/h3&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;他のグラフも追加したい
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 02 Oct 2013 00:00:00 +0900</pubDate>
+        <link>http://fjyuu.info/blog/graphg</link>
+        <guid isPermaLink="true">http://fjyuu.info/blog/graphg</guid>
+      </item>
+    
+      <item>
+        <title>ファイルが更新されたら自動で platex して dvipdfmx する</title>
+        <description>&lt;p&gt;  LaTeXを手動でコンパイルするのめんどくさいですよね．
+&lt;/p&gt;
+&lt;p&gt;
+  LaTeXのコンパイルを自動化するためには， &lt;a href=&quot;http://d.hatena.ne.jp/hayamiz/20081208/1228727272&quot;&gt;OMakeを使う&lt;/a&gt; といった方法があります．OMakeは依存ファイルの更新を感知して自動でコンパイルを行ってくれます．
+&lt;/p&gt;
+&lt;p&gt;
+  OMakeはBibTeXとかの依存関係を自動で判断してくれるので便利なんですが，簡単なレポートを書いてるときとかは，OMakefileとかOMakerootとか用意するのすらめんどくさいですよね．余分に管理するファイル増えちゃいますし．
+&lt;/p&gt;
+&lt;p&gt;
+  そこで，&lt;a href=&quot;http://fjyuu.info/platexpdf/&quot;&gt;以前作ったplatexpdf&lt;/a&gt; にファイルを監視して自動コンパイルするオプションを追加してみました．
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/fjyuu/platexpdf&quot;&gt;platexpdf - GitHub&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;
+  使い方は，
+&lt;/p&gt;
+
+
+
+&lt;pre class=&quot;src src-sh&quot;&gt;$ platexpdf -w -- paper.tex
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+  とすると，paper.texを監視します．他にも監視してほしいファイルがある場合には，
+&lt;/p&gt;
+
+
+
+&lt;pre class=&quot;src src-sh&quot;&gt;$ platexpdf -w paper1.tex -w paper2.tex paper1.tex
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+  とすると，paper1.texとpaper2.texのどちらかに変更があれば，paper1.texをコンパイルします．
+&lt;/p&gt;
+&lt;p&gt;
+  -w オプションには，ファイルもしくはディレクトリを指定できます．ディレクトリを指定した場合は，指定ディレクトリ以下を再帰的に監視します．監視ファイルを省略した場合は，コンパイル対象のファイルが指定されたとみなします．
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-1&quot;&gt;インストール&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-1&quot;&gt;
+
+
+&lt;p&gt;
+   &lt;strong&gt;Perlが動く環境が必要です．&lt;/strong&gt; とりあえず，platexpdfをダウンロードしてきてパスの通ってるとこに置きます．
+&lt;/p&gt;
+
+
+
+&lt;pre class=&quot;src src-sh&quot;&gt;$ curl -O https://raw.github.com/fjyuu/platexpdf/master/platexpdf
+$ chmod +x platexpdf
+$ mv platexpdf ~/bin
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+   普通に使うにはこれでいいのですが，-w オプションを使うためには，
+   &lt;a href=&quot;http://search.cpan.org/perldoc?Filesys%3A%3ANotify%3A%3ASimple&quot;&gt;Filesys::Notify::Simple&lt;/a&gt; モジュールが必要です．
+&lt;/p&gt;
+
+
+
+&lt;pre class=&quot;src src-sh&quot;&gt;&lt;span class=&quot;org-comment-delimiter&quot;&gt;# &lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;cpanm&amp;#12364;&amp;#12394;&amp;#12356;&amp;#22580;&amp;#21512;&amp;#12399;&amp;#12452;&amp;#12531;&amp;#12473;&amp;#12488;&amp;#12540;&amp;#12523;（パッケージにcpanmがあればそれをインストール）&lt;/span&gt;
+$ sudo curl -L http://cpanmin.us | perl - --sudo App::cpanminus
+
+&lt;span class=&quot;org-comment-delimiter&quot;&gt;# &lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;Filesys::Notify::Simple&amp;#12434;&amp;#12452;&amp;#12531;&amp;#12473;&amp;#12488;&amp;#12540;&amp;#12523;&lt;/span&gt;
+$ sudo cpanm --sudo Filesys::Notify::Simple
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+   デフォルトでは，Filesys::Notify::Simpleは数秒ごとにfindして更新を監視します．プラットフォームごとに以下のモジュールをインストールしておくことで，さらに効率的に監視することができます．
+&lt;/p&gt;
+
+
+
+&lt;pre class=&quot;src src-sh&quot;&gt;&lt;span class=&quot;org-comment-delimiter&quot;&gt;# &lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;Linux&lt;/span&gt;
+$ sudo cpanm --sudo Linux::Inotify2
+
+&lt;span class=&quot;org-comment-delimiter&quot;&gt;# &lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;OS X&lt;/span&gt;
+$ sudo cpanm --sudo Mac::FSEvents
+$ sudo cpanm --sudo Filesys::Notify::KQueue
+
+&lt;span class=&quot;org-comment-delimiter&quot;&gt;# &lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;FreeBSD&lt;/span&gt;
+$ sudo cpanm --sudo Filesys::Notify::KQueue
+&lt;/pre&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 06 Jun 2013 00:00:00 +0900</pubDate>
+        <link>http://fjyuu.info/blog/watch-platexpdf</link>
+        <guid isPermaLink="true">http://fjyuu.info/blog/watch-platexpdf</guid>
+      </item>
+    
+      <item>
+        <title>org-modeで日本語PDFを出力する</title>
+        <description>&lt;p&gt;  &lt;a href=&quot;http://fjyuu.info/platexpdf/&quot;&gt;platex して dvipdfmx するスクリプト&lt;/a&gt;が奥村先生の&lt;a href=&quot;http://oku.edu.mie-u.ac.jp/~okumura/texwiki/?Make&quot;&gt;TeX Wiki&lt;/a&gt;からリンクされている…！
+&lt;/p&gt;
+&lt;p&gt;
+  昔のコードが恥ずかしくなったので，少し書きなおしてみました．
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/fjyuu/platexpdf&quot;&gt;platexpdf – github&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;
+  ついでと言ってはなんですが，今回はこのスクリプトを使って，Emacsのorg-modeでPDFを出力してみます．
+&lt;/p&gt;
+&lt;p&gt;
+  org-modeにはPDFを出力する機能がありますが，デフォルトだと日本語を含むファイルを扱うことができません．
+&lt;/p&gt;
+&lt;p&gt;
+  そこで，日本語LaTeXに対応させるために，まず，最新のTeX環境であるTeX Liveをインストールします．Linux・Macの方は，&lt;a href=&quot;http://www.fugenji.org/~thomas/texlive-guide/&quot;&gt;こちら&lt;/a&gt; のサイトがとても参考になると思います．Macの方は &lt;a href=&quot;http://tug.org/mactex/&quot;&gt;MacTeX&lt;/a&gt; でもいいと思います．Windowsはどうやればいいのか知りません．
+&lt;/p&gt;
+&lt;p&gt;
+  TeX環境が整えば，先ほどの &lt;code&gt;platexpdf&lt;/code&gt; をパスの通ったところにおいて，以下のようなEmacsの設定を追加します．
+&lt;/p&gt;
+
+
+
+&lt;pre class=&quot;src src-emacs-lisp&quot;&gt;(&lt;span class=&quot;org-keyword&quot;&gt;when&lt;/span&gt; (&lt;span class=&quot;org-keyword&quot;&gt;require&lt;/span&gt; &#39;&lt;span class=&quot;org-constant&quot;&gt;org-install&lt;/span&gt; nil t)
+  &lt;span class=&quot;org-comment-delimiter&quot;&gt;;; &lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;LaTeX article class&lt;/span&gt;
+  (setq org-export-latex-classes
+        &#39;((&lt;span class=&quot;org-string&quot;&gt;&quot;article&quot;&lt;/span&gt;
+           &lt;span class=&quot;org-string&quot;&gt;&quot;\\documentclass[11pt,a4paper]{jsarticle}&lt;/span&gt;
+&lt;span class=&quot;org-string&quot;&gt;\\usepackage{amsmath}&lt;/span&gt;
+&lt;span class=&quot;org-string&quot;&gt;\\usepackage{amsthm}&lt;/span&gt;
+&lt;span class=&quot;org-string&quot;&gt;\\usepackage{bm}&lt;/span&gt;
+&lt;span class=&quot;org-string&quot;&gt;\\usepackage[dvipdfmx,hiresbb]{graphicx}&lt;/span&gt;
+&lt;span class=&quot;org-string&quot;&gt;\\usepackage[dvipdfmx]{color}&quot;&lt;/span&gt;
+           (&lt;span class=&quot;org-string&quot;&gt;&quot;\\section{%s}&quot;&lt;/span&gt; . &lt;span class=&quot;org-string&quot;&gt;&quot;\\section*{%s}&quot;&lt;/span&gt;)
+           (&lt;span class=&quot;org-string&quot;&gt;&quot;\\subsection{%s}&quot;&lt;/span&gt; . &lt;span class=&quot;org-string&quot;&gt;&quot;\\subsection*{%s}&quot;&lt;/span&gt;)
+           (&lt;span class=&quot;org-string&quot;&gt;&quot;\\subsubsection{%s}&quot;&lt;/span&gt; . &lt;span class=&quot;org-string&quot;&gt;&quot;\\subsubsection*{%s}&quot;&lt;/span&gt;)
+           (&lt;span class=&quot;org-string&quot;&gt;&quot;\\paragraph{%s}&quot;&lt;/span&gt; . &lt;span class=&quot;org-string&quot;&gt;&quot;\\paragraph*{%s}&quot;&lt;/span&gt;)
+           (&lt;span class=&quot;org-string&quot;&gt;&quot;\\subparagraph{%s}&quot;&lt;/span&gt; . &lt;span class=&quot;org-string&quot;&gt;&quot;\\subparagraph*{%s}&quot;&lt;/span&gt;))))
+
+  &lt;span class=&quot;org-comment-delimiter&quot;&gt;;; &lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;LaTeX&amp;#12363;&amp;#12425;PDF&amp;#12434;&amp;#20316;&amp;#25104;&amp;#12377;&amp;#12427;&amp;#12467;&amp;#12510;&amp;#12531;&amp;#12489;&lt;/span&gt;
+  (&lt;span class=&quot;org-keyword&quot;&gt;when&lt;/span&gt; (executable-find &lt;span class=&quot;org-string&quot;&gt;&quot;platexpdf&quot;&lt;/span&gt;)
+    (setq org-latex-to-pdf-process &#39;(&lt;span class=&quot;org-string&quot;&gt;&quot;platexpdf %f&quot;&lt;/span&gt; &lt;span class=&quot;org-string&quot;&gt;&quot;platexpdf %f&quot;&lt;/span&gt;)))
+
+  &lt;span class=&quot;org-comment-delimiter&quot;&gt;;; &lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;PDF&amp;#12434;&amp;#38283;&amp;#12367;&amp;#12467;&amp;#12510;&amp;#12531;&amp;#12489;&lt;/span&gt;
+  (&lt;span class=&quot;org-keyword&quot;&gt;eval-after-load&lt;/span&gt; &lt;span class=&quot;org-string&quot;&gt;&quot;org&quot;&lt;/span&gt;
+    &#39;(&lt;span class=&quot;org-keyword&quot;&gt;progn&lt;/span&gt;
+       (delete &#39;(&lt;span class=&quot;org-string&quot;&gt;&quot;\\.pdf\\&#39;&quot;&lt;/span&gt; . default) org-file-apps)
+       (add-to-list &#39;org-file-apps &#39;(&lt;span class=&quot;org-string&quot;&gt;&quot;\\.pdf\\&#39;&quot;&lt;/span&gt; . &lt;span class=&quot;org-string&quot;&gt;&quot;okular %s&quot;&lt;/span&gt;)))))
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+  これで，org-modeで日本語PDFが出力できるようになるはずです．
+&lt;/p&gt;
+</description>
+        <pubDate>Sun, 14 Apr 2013 00:00:00 +0900</pubDate>
+        <link>http://fjyuu.info/blog/org-export-pdf</link>
+        <guid isPermaLink="true">http://fjyuu.info/blog/org-export-pdf</guid>
+      </item>
+    
+      <item>
+        <title>シンプルA4メモテンプレートに枠線を入れてみた</title>
+        <description>&lt;p&gt;  &lt;img src=&quot;/img/wpid-memo-ss1.png&quot;  alt=&quot;file:///home/fjyuu/Dropbox/blog/memo-ss.png&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;a href=&quot;/a4-memo/&quot;&gt;以前作ったA4メモ&lt;/a&gt; を以下のように修正しました．
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/pdf/wpid-a4-memo1.pdf&quot;&gt;枠なしA4メモ（PDF）&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/pdf/wpid-a4-memo-2x21.pdf&quot;&gt;2×2の枠付A4メモ（PDF）&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/pdf/wpid-a4-memo-4x41.pdf&quot;&gt;4×4の枠付A4メモ（PDF）&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;
+  変更点は，
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;枠線を入れたバージョンの作成
+
+&lt;/li&gt;
+&lt;li&gt;「No.」はあまり有用ではなかったので削除
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;
+  したところです．
+&lt;/p&gt;
+&lt;p&gt;
+  枠線を追加したのは，スライドの下書きを書くときに便利だからです．以下のように使ってます．枠線が緑色なのは，枠線が目立ち過ぎないようにするためです．
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;img src=&quot;/img/wpid-memo-ex.jpg&quot;  alt=&quot;file:///home/fjyuu/Dropbox/blog/A4-memo/memo-ex.jpg&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  よかったら使ってみてください．
+&lt;/p&gt;
+&lt;p&gt;
+  なお，今回はLaTeXを使っていないのでソースはないです．
+&lt;/p&gt;
+</description>
+        <pubDate>Fri, 12 Apr 2013 00:00:00 +0900</pubDate>
+        <link>http://fjyuu.info/blog/presentation-a4-memo</link>
+        <guid isPermaLink="true">http://fjyuu.info/blog/presentation-a4-memo</guid>
+      </item>
+    
+      <item>
+        <title>間違いにくさを追求した短縮URLサービス「Biyoon」</title>
+        <description>&lt;p&gt;  &lt;img src=&quot;/img/wpid-biyoon-logo1.png&quot;  alt=&quot;file:///home/fjyuu/repository/web-site/biyoon/public/u/img/biyoon-logo.png&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  ちょっと間違えても大丈夫！新しい短縮URLサービス「Biyoon」を公開しました！
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://byn.vc/&quot;&gt;Biyoon&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;
+  このサービスは，長いURLを短く変換する短縮URLサービス一種です．本サービスでは，URLの短さだけではなく，URLの間違いにくさにこだわります．他の短縮URLサービスと異なる点として，以下の特徴があります．
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-1&quot;&gt;大文字・小文字の区別をしない&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-1&quot;&gt;
+
+
+&lt;p&gt;
+   &lt;img src=&quot;/img/wpid-feature1.png&quot;  alt=&quot;file:///home/fjyuu/repository/web-site/biyoon/public/u/img/feature1.png&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;
+   大文字と小文字を区別しないことで， &lt;strong&gt;口頭&lt;/strong&gt; でURLを伝えやすくします．
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-2&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2&quot;&gt;紛らわしい文字の同一視&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2&quot;&gt;
+
+
+&lt;p&gt;
+   &lt;img src=&quot;/img/wpid-feature2.png&quot;  alt=&quot;file:///home/fjyuu/repository/web-site/biyoon/public/u/img/feature2.png&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;
+   0（ゼロ）とO（オー）や，l（エル）とI（アイ）など紛らわしい文字を同一視することで， &lt;strong&gt;手書き&lt;/strong&gt; でURLを伝えたときの誤読を防ぎます．
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-3&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-3&quot;&gt;誤り訂正機能&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-3&quot;&gt;
+
+
+&lt;p&gt;
+   &lt;img src=&quot;/img/wpid-feature3.png&quot;  alt=&quot;file:///home/fjyuu/repository/web-site/biyoon/public/u/img/feature3.png&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;
+   短縮されたURLに誤り検査用の文字列を追加することで，数文字の &lt;strong&gt;誤りを    訂正&lt;/strong&gt; し，元の正しいURLに転送することができます．この機能は，地上デジタル放送の信号誤り訂正などでも利用されている，リードソロモン符号を用いることで実現しています．
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 28 Mar 2013 00:00:00 +0900</pubDate>
+        <link>http://fjyuu.info/blog/biyoon</link>
+        <guid isPermaLink="true">http://fjyuu.info/blog/biyoon</guid>
+      </item>
+    
+      <item>
+        <title>openSUSE と OSX で One Shot Modifier</title>
+        <description>&lt;p&gt;  openSUSE 12.2とOSX Mountain Lionに， One Shot Modifierを導入したときのメモです．
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-1&quot;&gt;One Shot Modifier&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-1&quot;&gt;
+
+
+&lt;p&gt;
+   &lt;em&gt;One Shot Modifier&lt;/em&gt; とは，あるキーXを押したまま別のキーを押したときと，あるキーXを単体で押したときとで，挙動を変える設定のことです．有名なOne Shot Modifierとして， &lt;a href=&quot;http://hp.vector.co.jp/authors/VA002116/sands/&quot;&gt;Space and Shift (SandS)&lt;/a&gt; というものがあります．これは，Spaceキーを他のキーと同時に押すことで，SpaceキーをShiftキーとして使うことができる設定です．大文字のアルファベットを打つのが非常にラクになります．欠点は，Spaceを押した瞬間ではなく，キーがもとに戻ったときにSpaceが入力されるので，タイプにひっかかりを感じることでしょうか．
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-2&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2&quot;&gt;openSUSEでOne Shot Modifier - At home modifier&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2&quot;&gt;
+
+
+&lt;p&gt;
+   At home modifierは，ドライバを置き換えることで，LinuxでOne Shot Modifierを実現してくれます．
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://gitorious.org/at-home-modifier&quot;&gt;At home modifier - Gitorious&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;
+   以下，openSUSE 12.2に導入したときのメモです．
+&lt;/p&gt;
+&lt;p&gt;
+   &lt;code&gt;git clone&lt;/code&gt; するかダウンロードしてきて，
+&lt;/p&gt;
+
+
+
+&lt;pre class=&quot;src src-sh&quot;&gt;$ sudo zypper install xorg-x11-server-sdk libudev-devel
+$ ./autogen.sh
+$ ./configure
+$ make
+$ sudo paco -D make install
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+   これで， &lt;code&gt;/usr/local/lib64/xorg/modules/input&lt;/code&gt; 以下にevdev_drv.soがインストールされます（最後の行では &lt;a href=&quot;http://paco.sourceforge.net/&quot;&gt;paco&lt;/a&gt; を使ってます）．このevdev_drv.soを，既存の
+   &lt;code&gt;/usr/lib64/xorg/modules/input/evdev_drv.so&lt;/code&gt; より優先させたかったのですが，スマートな方法がわからなかったのでゴリ押ししました．
+&lt;/p&gt;
+
+
+
+&lt;pre class=&quot;src src-sh&quot;&gt;$ cd /usr/lib64/xorg/modules/input
+$ sudo mv evdev_drv.so evdev_drv.so.bak
+$ sudo ln -s /usr/local/lib64/xorg/modules/input/evdev_drv.so ./
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+   つづいて， &lt;code&gt;/usr/share/X11/xorg.conf.d/10-evdev.conf&lt;/code&gt; に以下のようにオプションを書き加えます． &lt;code&gt;+&lt;/code&gt; が追加した行です．
+&lt;/p&gt;
+
+
+
+&lt;pre class=&quot;src src-diff&quot;&gt;&lt;span class=&quot;org-diff-context&quot;&gt;   Section &quot;InputClass&quot;&lt;/span&gt;
+&lt;span class=&quot;org-diff-context&quot;&gt;           Identifier &quot;evdev keyboard catchall&quot;&lt;/span&gt;
+&lt;span class=&quot;org-diff-context&quot;&gt;           MatchIsKeyboard &quot;on&quot;&lt;/span&gt;
+&lt;span class=&quot;org-diff-context&quot;&gt;           MatchDevicePath &quot;/dev/input/event*&quot;&lt;/span&gt;
+&lt;span class=&quot;org-diff-context&quot;&gt;           Driver &quot;evdev&quot;&lt;/span&gt;
+&lt;span class=&quot;org-diff-indicator-added&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;org-diff-added&quot;&gt;          # One Shot Modifier&lt;/span&gt;
+&lt;span class=&quot;org-diff-indicator-added&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;org-diff-added&quot;&gt;          # 65:&amp;lt;space&amp;gt; 50:&amp;lt;shift_L&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;org-diff-indicator-added&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;org-diff-added&quot;&gt;          # 48:quote(&#39;) 64:&amp;lt;alt_L&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;org-diff-indicator-added&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;org-diff-added&quot;&gt;          Option &quot;TransMod&quot; &quot;65:50 48:64&quot;&lt;/span&gt;
+&lt;span class=&quot;org-diff-context&quot;&gt;   EndSection&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+   ここでは，
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SpaceキーをShiftキーとしても使う（SandS）
+&lt;/li&gt;
+&lt;li&gt;Quote(&#39;)キーをAltとしても使う
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;
+   という設定を記述しています．QuoteキーをAltにしてるのは，こうすると，右小指の右隣がAltになり（英語配列），Emacsを使うときにいい感じになるからです．
+&lt;/p&gt;
+&lt;p&gt;
+   設定を実際に反映させるためには，Xを再起動する必要があります．
+&lt;/p&gt;
+&lt;p&gt;
+   このように，あらゆるキーをOne Shot Modifierキーにすることができます．キーコードが分からないときは &lt;code&gt;xev&lt;/code&gt; コマンドで確認しましょう．
+&lt;/p&gt;
+&lt;p&gt;
+   他にも細かく設定できる項目があるので，詳しくは &lt;a href=&quot;http://gitorious.org/at-home-modifier/at-home-modifier/blobs/raw/master/README&quot;&gt;README&lt;/a&gt; を見てください．
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-3&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-3&quot;&gt;OSX (Mac)でOne Shot Modifier - KeyRemap4MacBook&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-3&quot;&gt;
+
+
+&lt;p&gt;
+   OS Xでは， &lt;a href=&quot;http://pqrs.org/macosx/keyremap4macbook/index.html.ja&quot;&gt;KeyRemap4MacBook&lt;/a&gt; というソフトにより，One Shot Modifierを実現出来ます．SandSは，デフォルトで用意されているので，以下のページで紹介されているように簡単に設定できます．
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://pqrs.org/macosx/doc/keyboard/&quot;&gt;Mac OS X で SandS (Space and Shift) を使う&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;
+   QuoteキーをAltにする設定などは用意されていないので，自分で作成する必要があります．
+&lt;/p&gt;
+&lt;p&gt;
+   Misc &amp;amp; Uninstallタブの中にCustom Settingという項目があるので，そこのprivate.xmlをいじることにより，独自のキー割り当てを作成できます．QuoteキーをOptionキーとしても使う設定は以下のようになります．
+&lt;/p&gt;
+
+
+
+&lt;pre class=&quot;src src-xml&quot;&gt;&lt;span class=&quot;org-nxml-processing-instruction-delimiter&quot;&gt;&amp;lt;?&lt;/span&gt;&lt;span class=&quot;org-nxml-processing-instruction-target&quot;&gt;xml&lt;/span&gt; &lt;span class=&quot;org-nxml-attribute-local-name&quot;&gt;version&lt;/span&gt;=&lt;span class=&quot;org-nxml-attribute-value-delimiter&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;org-nxml-attribute-value&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;org-nxml-attribute-value-delimiter&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;org-nxml-processing-instruction-delimiter&quot;&gt;?&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;org-nxml-element-local-name&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;org-nxml-element-local-name&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;org-nxml-element-local-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;org-nxml-text&quot;&gt;One Shot Modifier&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-slash&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;org-nxml-element-local-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;org-nxml-element-local-name&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;org-nxml-element-local-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;org-nxml-text&quot;&gt;Quote(&#39;) to Option_R Key&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-slash&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;org-nxml-element-local-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;org-nxml-element-local-name&quot;&gt;appendix&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;org-nxml-text&quot;&gt;(+ When you type Quote only, send Quote)&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-slash&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;org-nxml-element-local-name&quot;&gt;appendix&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;org-nxml-element-local-name&quot;&gt;appendix&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;org-nxml-text&quot;&gt;Fn+Quote to Quote&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-slash&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;org-nxml-element-local-name&quot;&gt;appendix&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;org-nxml-element-local-name&quot;&gt;identifier&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;org-nxml-text&quot;&gt;fjyuu.quote2optionR_quote_fnquote&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-slash&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;org-nxml-element-local-name&quot;&gt;identifier&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;org-nxml-element-local-name&quot;&gt;autogen&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;org-nxml-text&quot;&gt;__KeyToKey__ KeyCode::QUOTE, ModifierFlag::FN, KeyCode::QUOTE&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-slash&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;org-nxml-element-local-name&quot;&gt;autogen&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;org-nxml-element-local-name&quot;&gt;autogen&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;org-nxml-text&quot;&gt;__KeyOverlaidModifier__ KeyCode::QUOTE, KeyCode::OPTION_R, KeyCode::QUOTE&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-slash&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;org-nxml-element-local-name&quot;&gt;autogen&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-slash&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;org-nxml-element-local-name&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-slash&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;org-nxml-element-local-name&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-slash&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;org-nxml-element-local-name&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;org-nxml-tag-delimiter&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+   このように設定を追加していけば，OS XでもあらゆるキーをOne Shot Modifierに設定できます．
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-4&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-4&quot;&gt;ちなみにWindowsでは&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-4&quot;&gt;
+
+
+&lt;p&gt;
+   試していませんが，ちょっと調べたところ，Windowsでは
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://sourceforge.jp/projects/yamy/&quot;&gt;yamy&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.appletkan.com/nodoka.htm&quot;&gt;のどか&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;
+   などのソフトでOne Shot Modifierを実現できるみたいです．
+&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 28 Feb 2013 00:00:00 +0900</pubDate>
+        <link>http://fjyuu.info/blog/opensuse-osx-one-shot-modifier</link>
+        <guid isPermaLink="true">http://fjyuu.info/blog/opensuse-osx-one-shot-modifier</guid>
+      </item>
+    
+      <item>
+        <title>org-modeでコードハイライトされたHTMLを出力する</title>
+        <description>&lt;p&gt;  org-modeで，コードハイライトされたHTMLを出力する方法のメモです．
+&lt;/p&gt;
+&lt;p&gt;
+  とりあえず，package.elかなにかを使って
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;org
+&lt;/li&gt;
+&lt;li&gt;htmlize
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;
+  をインストールします．package.elを使うときは，MELPAリポジトリを追加しておきましょう．
+&lt;/p&gt;
+
+
+
+&lt;pre class=&quot;src src-emacs-lisp&quot;&gt;(&lt;span class=&quot;org-keyword&quot;&gt;when&lt;/span&gt; (&lt;span class=&quot;org-keyword&quot;&gt;require&lt;/span&gt; &#39;&lt;span class=&quot;org-constant&quot;&gt;package&lt;/span&gt; nil t)
+  &lt;span class=&quot;org-comment-delimiter&quot;&gt;;; &lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;&amp;#12497;&amp;#12483;&amp;#12465;&amp;#12540;&amp;#12472;&amp;#12522;&amp;#12509;&amp;#12472;&amp;#12488;&amp;#12522;&amp;#12395;Melpa&amp;#12434;&amp;#36861;&amp;#21152;&lt;/span&gt;
+  (add-to-list &#39;package-archives
+               &#39;(&lt;span class=&quot;org-string&quot;&gt;&quot;melpa&quot;&lt;/span&gt; . &lt;span class=&quot;org-string&quot;&gt;&quot;http://melpa.milkbox.net/packages/&quot;&lt;/span&gt;) t))
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+  つづいて，init.elかどこかに以下を記述します．
+&lt;/p&gt;
+
+
+
+&lt;pre class=&quot;src src-emacs-lisp&quot;&gt;(&lt;span class=&quot;org-keyword&quot;&gt;when&lt;/span&gt; (&lt;span class=&quot;org-keyword&quot;&gt;require&lt;/span&gt; &#39;&lt;span class=&quot;org-constant&quot;&gt;org-install&lt;/span&gt; nil t)
+  &lt;span class=&quot;org-comment-delimiter&quot;&gt;;; &lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;HTML&amp;#20986;&amp;#21147;&amp;#12375;&amp;#12383;&amp;#12392;&amp;#12365;&amp;#12467;&amp;#12540;&amp;#12489;&amp;#12495;&amp;#12452;&amp;#12521;&amp;#12452;&amp;#12488;css&amp;#12434;&amp;#20998;&amp;#38626;&amp;#12377;&amp;#12427;&lt;/span&gt;
+  &lt;span class=&quot;org-comment-delimiter&quot;&gt;;; &lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;&amp;#12487;&amp;#12501;&amp;#12457;&amp;#12523;&amp;#12488;(inline-css)&amp;#12384;&amp;#12392;css&amp;#12364;&amp;#12452;&amp;#12531;&amp;#12521;&amp;#12452;&amp;#12531;&amp;#12395;&amp;#22475;&amp;#12417;&amp;#36796;&amp;#12414;&amp;#12428;&amp;#12427;&lt;/span&gt;
+  (setq org-export-htmlize-output-type &#39;css))
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+  これで，キーワードがclass付けされたHTMLが出力されるはずです．class付けされただけでは色が付かないので，適当なCSSを用意する必要があります．
+&lt;/p&gt;
+&lt;p&gt;
+  自分で書くのは大変なので，Emacsで &lt;code&gt;M-x org-export-htmlize-generate-css&lt;/code&gt;
+  を実行すると，そのとき定義されているfaceを反映したcssを自動で生成してくれます．
+  &lt;code&gt;M-x customize-themes&lt;/code&gt;
+  でいい感じのテーマを選んでから，cssを生成するといいと思います．
+&lt;/p&gt;
+&lt;p&gt;
+  ちなみに，この方法でCSSファイルを作るときに，
+  &lt;code&gt;Invalid face: font-lock-comment&lt;/code&gt;
+  みたいなエラーに苦しめられました．この場合だと，font-lock-commentというfaceが定義されてないみたいで，font-lock-commentが使われているところを探し出して適当に修正してあげれば解決しました．
+&lt;/p&gt;
+&lt;p&gt;
+  実際にやってみると，たとえばorg-modeで
+&lt;/p&gt;
+
+
+
+&lt;pre class=&quot;example&quot;&gt;#+BEGIN_SRC perl
+  #!/usr/bin/env perl
+  use strict;
+  use warnings;
+
+  while (&amp;lt;&amp;gt;) {
+      unless (/^\p{InBasicLatin}*$/) {
+          print &quot;$.: $_&quot;;
+      }
+  }
+#+END_SRC
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+  と書いて，HTMLに出力すると以下のようになります．生成したcssをくっつけるのを忘れずに．
+&lt;/p&gt;
+
+
+
+&lt;pre class=&quot;src src-perl&quot;&gt;&lt;span class=&quot;org-comment-delimiter&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;!/usr/bin/env perl&lt;/span&gt;
+&lt;span class=&quot;org-keyword&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;org-function-name&quot;&gt;strict&lt;/span&gt;;
+&lt;span class=&quot;org-keyword&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;org-function-name&quot;&gt;warnings&lt;/span&gt;;
+
+&lt;span class=&quot;org-keyword&quot;&gt;while&lt;/span&gt; (&amp;lt;&amp;gt;) {
+    &lt;span class=&quot;org-keyword&quot;&gt;unless&lt;/span&gt; (&lt;span class=&quot;org-constant&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;org-function-name&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;org-builtin&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;org-type&quot;&gt;p{InBasicLatin}&lt;/span&gt;&lt;span class=&quot;org-builtin&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;org-function-name&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;org-constant&quot;&gt;/&lt;/span&gt;) {
+        &lt;span class=&quot;org-cperl-nonoverridable&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;org-string&quot;&gt;&quot;$.: $_&quot;&lt;/span&gt;;
+    }
+}
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+  このHTMLを &lt;a href=&quot;https://github.com/punchagan/org2blog&quot;&gt;org2blog.el&lt;/a&gt; でそのままWordPressに送ってやれば，
+  &lt;a href=&quot;http://alexgorbatchev.com/SyntaxHighlighter/&quot;&gt;SyntaxHighlighter&lt;/a&gt; などのプラグインを導入しなくても，色のついたソースコードを投稿できます．（cssはどこかに書いておく必要があります．）
+&lt;/p&gt;
+
+
+&lt;h3&gt;追記（2013.10.2.）&lt;/h3&gt;
+
+&lt;p&gt;
+Org-modeのバージョン8.xでは，CSSの設定変数の名前が変わっています．CSSを分離するためには，以下のようにする必要があります．
+&lt;/p&gt;
+
+&lt;pre class=&quot;src src-emacs-lisp&quot;&gt;(setq org-html-htmlize-output-type &#39;css)
+&lt;/pre&gt;
+</description>
+        <pubDate>Tue, 26 Feb 2013 00:00:00 +0900</pubDate>
+        <link>http://fjyuu.info/blog/org-html-highlight</link>
+        <guid isPermaLink="true">http://fjyuu.info/blog/org-html-highlight</guid>
+      </item>
+    
+      <item>
+        <title>org-modeが出力するHTMLから余分な改行を削除する</title>
+        <description>&lt;p&gt;  最近， &lt;a href=&quot;http://orgmode.org/ja/index.html&quot;&gt;org-mode&lt;/a&gt; というEmacsで使えるMarkdownの超すごいバージョンみたいなのを使い始めました．
+&lt;/p&gt;
+&lt;p&gt;
+  このorg-modeには，プレインテキストをHTMLやLaTeXなど，様々な形式に変換する機能があります．さらには，&lt;a href=&quot;https://github.com/punchagan/org2blog&quot;&gt;org2blog.el&lt;/a&gt;という拡張を入れることで，org-modeで書いたものをそのままブログへ投稿することも可能です．すごい．
+&lt;/p&gt;
+&lt;p&gt;
+  ただ，少し気になったところとして，変換されるHTMLをそのままブラウザで見るとなにかがおかしい．たとえば，以下のようにorg-modeで書いたとします．
+&lt;/p&gt;
+
+
+
+&lt;pre class=&quot;src src-text&quot;&gt;&amp;#21566;&amp;#36649;&amp;#12399;
+&amp;#29483;&amp;#12391;&amp;#12354;&amp;#12427;
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+  これをHTMLに変換すると，
+&lt;/p&gt;
+
+
+
+&lt;pre class=&quot;src src-html&quot;&gt;&amp;lt;&lt;span class=&quot;org-function-name&quot;&gt;p&lt;/span&gt;&amp;gt;
+    &amp;#21566;&amp;#36649;&amp;#12399;
+    &amp;#29483;&amp;#12391;&amp;#12354;&amp;#12427;
+&amp;lt;/&lt;span class=&quot;org-function-name&quot;&gt;p&lt;/span&gt;&amp;gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+  になります．これをブラウザで見た場合，「吾輩は」と「猫である」の間に半角スペースが入ってしまいます．英語の場合はこの動作でいいのですが日本語の場合はここには半角スペースを入れてほしくありません．これはorg-modeが悪いわけではありません．Markdownとかでも同様の問題が起こります．（&lt;a href=&quot;http://www.asahi-net.or.jp/~wq6k-yn/kaigyo.html&quot;&gt;こちらのページ&lt;/a&gt;を見る限りでは，ブラウザが悪いそうです．確かにLaTeXみたいに改行無視してくれたらいいのに・・・）
+&lt;/p&gt;
+&lt;p&gt;
+  以下のページでは，この問題に対して，1文ごとに改行するという方法が提案されています．（ここで述べられているfill-paragraphは僕もよく使います．）
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://mikio.github.com/article/2013/02/16_org-mode.html&quot;&gt;org-modeの段落の改行を削除したい&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;
+  しかし，HTMLの仕様のせいでorg-modeでの書き方が制限されるのはなんか嫌だ．そこで，以下のようなものを書いてみました．
+&lt;/p&gt;
+
+
+
+&lt;pre class=&quot;src src-emacs-lisp&quot;&gt;&lt;span class=&quot;org-comment-delimiter&quot;&gt;;; &lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;HTML&amp;#20986;&amp;#21147;&amp;#26178;&amp;#65292;&amp;#28961;&amp;#39364;&amp;#12394;&amp;#12473;&amp;#12506;&amp;#12540;&amp;#12473;&amp;#12434;&amp;#21066;&amp;#38500;&lt;/span&gt;
+&lt;span class=&quot;org-comment-delimiter&quot;&gt;;; &lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;jhtml-filter.pl&amp;#12434;&amp;#21033;&amp;#29992; https://github.com/fjyuu/jhtml-filter&lt;/span&gt;
+(&lt;span class=&quot;org-keyword&quot;&gt;when&lt;/span&gt; (executable-find &lt;span class=&quot;org-string&quot;&gt;&quot;jhtml-filter.pl&quot;&lt;/span&gt;)
+  (&lt;span class=&quot;org-keyword&quot;&gt;defun&lt;/span&gt; &lt;span class=&quot;org-function-name&quot;&gt;my/org-export-jhtml-filter&lt;/span&gt; ()
+    &lt;span class=&quot;org-doc&quot;&gt;&quot;A filter which removes spaces between japanese characters&quot;&lt;/span&gt;
+    (&lt;span class=&quot;org-keyword&quot;&gt;let&lt;/span&gt; ((filtered-html nil)
+          (tempfile (make-temp-name
+                     (expand-file-name &lt;span class=&quot;org-string&quot;&gt;&quot;jhtml-filter&quot;&lt;/span&gt;
+                                       temporary-file-directory))))
+      (write-region (point-min) (point-max) tempfile nil &#39;nomsg)
+      (setq filtered-html (shell-command-to-string
+                           (concat &lt;span class=&quot;org-string&quot;&gt;&quot;jhtml-filter.pl -e utf8 &quot;&lt;/span&gt; tempfile)))
+      (delete-region (point-min) (point-max))
+      (insert filtered-html)))
+  (add-hook &#39;org-export-html-final-hook &#39;my/org-export-jhtml-filter))
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+  Elispはコピペしかしたことないので，なんかマズイかもしれませんが，一応これでHTML出力時の余分な改行は削除できました．Elispで全部やるのがカッコイイと思いますが，それは（実力的に）無理だったので，自作のjhtml-filter.plというのを使っています．
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/fjyuu/jhtml-filter&quot;&gt;jhtml-filter.pl - Github&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;
+  この設定を書いておくと，先ほどのorg-modeのテキストは，
+&lt;/p&gt;
+
+
+
+&lt;pre class=&quot;src src-html&quot;&gt;&amp;lt;&lt;span class=&quot;org-function-name&quot;&gt;p&lt;/span&gt;&amp;gt;
+    &amp;#21566;&amp;#36649;&amp;#12399;&amp;#29483;&amp;#12391;&amp;#12354;&amp;#12427;
+&amp;lt;/&lt;span class=&quot;org-function-name&quot;&gt;p&lt;/span&gt;&amp;gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+  に変換されて，余分なスペースが消えます．
+&lt;/p&gt;
+
+&lt;h3&gt;追記（2013.10.2.）&lt;/h3&gt;
+
+&lt;p&gt;
+org-mode version 8.xでは，上記のElispが動きません．以下に書きかえてください．
+&lt;/p&gt;
+
+&lt;pre class=&quot;src src-emacs-lisp&quot;&gt;(&lt;span class=&quot;org-keyword&quot;&gt;when&lt;/span&gt; (executable-find &lt;span class=&quot;org-string&quot;&gt;&quot;jhtml-filter.pl&quot;&lt;/span&gt;)
+    (&lt;span class=&quot;org-keyword&quot;&gt;defun&lt;/span&gt; &lt;span class=&quot;org-function-name&quot;&gt;my/org-export-jhtml-filter&lt;/span&gt; (string backend info)
+      &lt;span class=&quot;org-doc&quot;&gt;&quot;A filter which removes spaces between japanese characters&quot;&lt;/span&gt;
+      (&lt;span class=&quot;org-keyword&quot;&gt;if&lt;/span&gt; (org-export-derived-backend-p backend &#39;html)
+          (&lt;span class=&quot;org-keyword&quot;&gt;let&lt;/span&gt; ((filtered-html nil)
+                (tempfile (make-temp-name
+                           (expand-file-name &lt;span class=&quot;org-string&quot;&gt;&quot;jhtml-filter&quot;&lt;/span&gt;
+                                             temporary-file-directory))))
+            (write-region string nil tempfile nil &#39;nomsg)
+            (shell-command-to-string
+             (concat &lt;span class=&quot;org-string&quot;&gt;&quot;jhtml-filter.pl -e utf8 &quot;&lt;/span&gt; tempfile)))))
+    (&lt;span class=&quot;org-keyword&quot;&gt;eval-after-load&lt;/span&gt; &#39;ox-html
+      &#39;(add-to-list &#39;org-export-filter-final-output-functions
+                    &#39;my/org-export-jhtml-filter)))
+&lt;/pre&gt;
+</description>
+        <pubDate>Sun, 24 Feb 2013 00:00:00 +0900</pubDate>
+        <link>http://fjyuu.info/blog/remove-japanese-spaces</link>
+        <guid isPermaLink="true">http://fjyuu.info/blog/remove-japanese-spaces</guid>
+      </item>
+    
+      <item>
+        <title>Elispをまとめてバイトコンパイル</title>
+        <description>&lt;p&gt;ElispをコンパイルするとEmacsの起動が速くなるらしい．コンパイルの方法としては，以下があるみたい．&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;M-x byte-compile-file&lt;/code&gt;でファイルを指定してコンパイル&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-u 0 M-x byte-recompile-directory&lt;/code&gt;でディレクトリ以下の*.elをコンパイル&lt;/li&gt;
+&lt;li&gt;コマンドラインから&lt;code&gt;emacs --quick --batch -f batch-byte-compile hoge.el&lt;/code&gt;でコンパイル（-Lオプションでロードパスを追加）&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;2番の方法がラクでいいですね．&lt;/p&gt;
+</description>
+        <pubDate>Fri, 31 Aug 2012 00:00:00 +0900</pubDate>
+        <link>http://fjyuu.info/blog/elisp-compilation</link>
+        <guid isPermaLink="true">http://fjyuu.info/blog/elisp-compilation</guid>
+      </item>
+    
+  </channel>
+</rss>

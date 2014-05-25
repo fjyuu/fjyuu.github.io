@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>org-modeで日本語PDFを出力する</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="個人的なメモを書きます">
+    <link rel="canonical" href="http://fjyuu.info/blog/org-export-pdf">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+</head>
+
+
+    <body>
+
+    <header class="site-header">
+
+  <div class="wrap">
+
+    <a class="site-title" href="/">fjyuu.info</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
+          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
+            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
+            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
+            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/blog/">Blog</a>
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      <div class="post">
+
+  <header class="post-header">
+    <h1>org-modeで日本語PDFを出力する</h1>
+    <p class="meta">Apr 14, 2013</p>
+  </header>
+
+  <article class="post-content">
+  <p>  <a href="http://fjyuu.info/platexpdf/">platex して dvipdfmx するスクリプト</a>が奥村先生の<a href="http://oku.edu.mie-u.ac.jp/~okumura/texwiki/?Make">TeX Wiki</a>からリンクされている…！
+</p>
+<p>
+  昔のコードが恥ずかしくなったので，少し書きなおしてみました．
+</p>
+<ul>
+<li><a href="https://github.com/fjyuu/platexpdf">platexpdf – github</a>
+</li>
+</ul>
+
+
+<p>
+  ついでと言ってはなんですが，今回はこのスクリプトを使って，Emacsのorg-modeでPDFを出力してみます．
+</p>
+<p>
+  org-modeにはPDFを出力する機能がありますが，デフォルトだと日本語を含むファイルを扱うことができません．
+</p>
+<p>
+  そこで，日本語LaTeXに対応させるために，まず，最新のTeX環境であるTeX Liveをインストールします．Linux・Macの方は，<a href="http://www.fugenji.org/~thomas/texlive-guide/">こちら</a> のサイトがとても参考になると思います．Macの方は <a href="http://tug.org/mactex/">MacTeX</a> でもいいと思います．Windowsはどうやればいいのか知りません．
+</p>
+<p>
+  TeX環境が整えば，先ほどの <code>platexpdf</code> をパスの通ったところにおいて，以下のようなEmacsの設定を追加します．
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(<span class="org-keyword">when</span> (<span class="org-keyword">require</span> '<span class="org-constant">org-install</span> nil t)
+  <span class="org-comment-delimiter">;; </span><span class="org-comment">LaTeX article class</span>
+  (setq org-export-latex-classes
+        '((<span class="org-string">"article"</span>
+           <span class="org-string">"\\documentclass[11pt,a4paper]{jsarticle}</span>
+<span class="org-string">\\usepackage{amsmath}</span>
+<span class="org-string">\\usepackage{amsthm}</span>
+<span class="org-string">\\usepackage{bm}</span>
+<span class="org-string">\\usepackage[dvipdfmx,hiresbb]{graphicx}</span>
+<span class="org-string">\\usepackage[dvipdfmx]{color}"</span>
+           (<span class="org-string">"\\section{%s}"</span> . <span class="org-string">"\\section*{%s}"</span>)
+           (<span class="org-string">"\\subsection{%s}"</span> . <span class="org-string">"\\subsection*{%s}"</span>)
+           (<span class="org-string">"\\subsubsection{%s}"</span> . <span class="org-string">"\\subsubsection*{%s}"</span>)
+           (<span class="org-string">"\\paragraph{%s}"</span> . <span class="org-string">"\\paragraph*{%s}"</span>)
+           (<span class="org-string">"\\subparagraph{%s}"</span> . <span class="org-string">"\\subparagraph*{%s}"</span>))))
+
+  <span class="org-comment-delimiter">;; </span><span class="org-comment">LaTeX&#12363;&#12425;PDF&#12434;&#20316;&#25104;&#12377;&#12427;&#12467;&#12510;&#12531;&#12489;</span>
+  (<span class="org-keyword">when</span> (executable-find <span class="org-string">"platexpdf"</span>)
+    (setq org-latex-to-pdf-process '(<span class="org-string">"platexpdf %f"</span> <span class="org-string">"platexpdf %f"</span>)))
+
+  <span class="org-comment-delimiter">;; </span><span class="org-comment">PDF&#12434;&#38283;&#12367;&#12467;&#12510;&#12531;&#12489;</span>
+  (<span class="org-keyword">eval-after-load</span> <span class="org-string">"org"</span>
+    '(<span class="org-keyword">progn</span>
+       (delete '(<span class="org-string">"\\.pdf\\'"</span> . default) org-file-apps)
+       (add-to-list 'org-file-apps '(<span class="org-string">"\\.pdf\\'"</span> . <span class="org-string">"okular %s"</span>)))))
+</pre>
+
+
+<p>
+  これで，org-modeで日本語PDFが出力できるようになるはずです．
+</p>
+
+  </article>
+
+</div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+</footer>
+
+
+    </body>
+</html>

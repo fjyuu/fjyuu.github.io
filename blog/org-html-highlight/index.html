@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>org-modeでコードハイライトされたHTMLを出力する</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="個人的なメモを書きます">
+    <link rel="canonical" href="http://fjyuu.info/blog/org-html-highlight">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+</head>
+
+
+    <body>
+
+    <header class="site-header">
+
+  <div class="wrap">
+
+    <a class="site-title" href="/">fjyuu.info</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
+          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
+            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
+            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
+            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/blog/">Blog</a>
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      <div class="post">
+
+  <header class="post-header">
+    <h1>org-modeでコードハイライトされたHTMLを出力する</h1>
+    <p class="meta">Feb 26, 2013</p>
+  </header>
+
+  <article class="post-content">
+  <p>  org-modeで，コードハイライトされたHTMLを出力する方法のメモです．
+</p>
+<p>
+  とりあえず，package.elかなにかを使って
+</p>
+<ul>
+<li>org
+</li>
+<li>htmlize
+</li>
+</ul>
+
+
+<p>
+  をインストールします．package.elを使うときは，MELPAリポジトリを追加しておきましょう．
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(<span class="org-keyword">when</span> (<span class="org-keyword">require</span> '<span class="org-constant">package</span> nil t)
+  <span class="org-comment-delimiter">;; </span><span class="org-comment">&#12497;&#12483;&#12465;&#12540;&#12472;&#12522;&#12509;&#12472;&#12488;&#12522;&#12395;Melpa&#12434;&#36861;&#21152;</span>
+  (add-to-list 'package-archives
+               '(<span class="org-string">"melpa"</span> . <span class="org-string">"http://melpa.milkbox.net/packages/"</span>) t))
+</pre>
+
+
+<p>
+  つづいて，init.elかどこかに以下を記述します．
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(<span class="org-keyword">when</span> (<span class="org-keyword">require</span> '<span class="org-constant">org-install</span> nil t)
+  <span class="org-comment-delimiter">;; </span><span class="org-comment">HTML&#20986;&#21147;&#12375;&#12383;&#12392;&#12365;&#12467;&#12540;&#12489;&#12495;&#12452;&#12521;&#12452;&#12488;css&#12434;&#20998;&#38626;&#12377;&#12427;</span>
+  <span class="org-comment-delimiter">;; </span><span class="org-comment">&#12487;&#12501;&#12457;&#12523;&#12488;(inline-css)&#12384;&#12392;css&#12364;&#12452;&#12531;&#12521;&#12452;&#12531;&#12395;&#22475;&#12417;&#36796;&#12414;&#12428;&#12427;</span>
+  (setq org-export-htmlize-output-type 'css))
+</pre>
+
+
+<p>
+  これで，キーワードがclass付けされたHTMLが出力されるはずです．class付けされただけでは色が付かないので，適当なCSSを用意する必要があります．
+</p>
+<p>
+  自分で書くのは大変なので，Emacsで <code>M-x org-export-htmlize-generate-css</code>
+  を実行すると，そのとき定義されているfaceを反映したcssを自動で生成してくれます．
+  <code>M-x customize-themes</code>
+  でいい感じのテーマを選んでから，cssを生成するといいと思います．
+</p>
+<p>
+  ちなみに，この方法でCSSファイルを作るときに，
+  <code>Invalid face: font-lock-comment</code>
+  みたいなエラーに苦しめられました．この場合だと，font-lock-commentというfaceが定義されてないみたいで，font-lock-commentが使われているところを探し出して適当に修正してあげれば解決しました．
+</p>
+<p>
+  実際にやってみると，たとえばorg-modeで
+</p>
+
+
+
+<pre class="example">#+BEGIN_SRC perl
+  #!/usr/bin/env perl
+  use strict;
+  use warnings;
+
+  while (&lt;&gt;) {
+      unless (/^\p{InBasicLatin}*$/) {
+          print "$.: $_";
+      }
+  }
+#+END_SRC
+</pre>
+
+
+<p>
+  と書いて，HTMLに出力すると以下のようになります．生成したcssをくっつけるのを忘れずに．
+</p>
+
+
+
+<pre class="src src-perl"><span class="org-comment-delimiter">#</span><span class="org-comment">!/usr/bin/env perl</span>
+<span class="org-keyword">use</span> <span class="org-function-name">strict</span>;
+<span class="org-keyword">use</span> <span class="org-function-name">warnings</span>;
+
+<span class="org-keyword">while</span> (&lt;&gt;) {
+    <span class="org-keyword">unless</span> (<span class="org-constant">/</span><span class="org-function-name">^</span><span class="org-builtin">\</span><span class="org-type">p{InBasicLatin}</span><span class="org-builtin">*</span><span class="org-function-name">$</span><span class="org-constant">/</span>) {
+        <span class="org-cperl-nonoverridable">print</span> <span class="org-string">"$.: $_"</span>;
+    }
+}
+</pre>
+
+
+<p>
+  このHTMLを <a href="https://github.com/punchagan/org2blog">org2blog.el</a> でそのままWordPressに送ってやれば，
+  <a href="http://alexgorbatchev.com/SyntaxHighlighter/">SyntaxHighlighter</a> などのプラグインを導入しなくても，色のついたソースコードを投稿できます．（cssはどこかに書いておく必要があります．）
+</p>
+
+
+<h3>追記（2013.10.2.）</h3>
+
+<p>
+Org-modeのバージョン8.xでは，CSSの設定変数の名前が変わっています．CSSを分離するためには，以下のようにする必要があります．
+</p>
+
+<pre class="src src-emacs-lisp">(setq org-html-htmlize-output-type 'css)
+</pre>
+
+  </article>
+
+</div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+</footer>
+
+
+    </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fedora/Ubuntuで日本語インクリメンタルサーチMigemo</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="個人的なメモを書きます">
+    <link rel="canonical" href="http://fjyuu.info/blog/migemo">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+</head>
+
+
+    <body>
+
+    <header class="site-header">
+
+  <div class="wrap">
+
+    <a class="site-title" href="/">fjyuu.info</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
+          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
+            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
+            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
+            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/blog/">Blog</a>
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      <div class="post">
+
+  <header class="post-header">
+    <h1>Fedora/Ubuntuで日本語インクリメンタルサーチMigemo</h1>
+    <p class="meta">Jul 15, 2012</p>
+  </header>
+
+  <article class="post-content">
+  <p>FedoraとUbuntuにC/Migemoを導入するメモです．</p>
+
+<p><a href="http://0xcc.net/migemo/">Migemo</a>とは，</p>
+
+<blockquote>
+  Migemoはローマ字のまま日本語をインクリメンタル検索するためのツールです。かな漢字変換をすることなく日本語のインクリメンタル検索を快適に行うことができます。
+</blockquote>
+
+<p>というものです．便利です．実際に使ってみたのが，以下の図です．「ni」で検索すると「日」，「に」，「2」にもマッチします．</p>
+
+<p><img src="/img/migemo.png" alt="migemo" title="migemo" width="535" height="296" class="aligncenter size-full wp-image-58" /></p>
+
+<h3>インストール</h3>
+
+<p>ここでは，Fedora16とUbuntu12にC/Migemoをインストールして，Emacsから使うことを目標にします．</p>
+
+<p>まず，C/Migemoとmigemo.elのインストール．Fedoraでは，以下のようにパッケージから持ってきます．</p>
+
+<pre class="src src-sh">% sudo yum install migemo-emacs cmigemo
+</pre>
+
+<p>Ubuntuでは，以下のようにパッケージから持ってきます．</p>
+
+<pre class="src src-sh">% sudo aptitude install migemo cmigemo
+</pre>
+
+<p>続いて，Emacsの設定です．~/.emacs.d/init.el等に，</p>
+
+<pre class="src src-emacs-lisp"><span class="org-comment-delimiter">;;; </span><span class="org-comment">Migemo</span>
+
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Migemo&#12364;&#24517;&#35201;</span>
+<span class="org-comment-delimiter">;; </span><span class="org-comment">C/Migemo&#12364;&#12354;&#12428;&#12400;&#20778;&#20808;&#12375;&#12390;&#20351;&#12358;</span>
+
+(<span class="org-keyword">when</span> (and (or (executable-find <span class="org-string">"migemo"</span>)
+               (executable-find <span class="org-string">"cmigemo"</span>))
+           (<span class="org-keyword">require</span> '<span class="org-constant">migemo</span> nil t))
+  <span class="org-comment-delimiter">;; </span><span class="org-comment">C/Migemo&#12364;&#12354;&#12427;&#22580;&#21512;</span>
+  (<span class="org-keyword">when</span> (executable-find <span class="org-string">"cmigemo"</span>)
+    <span class="org-comment-delimiter">;; </span><span class="org-comment">&#12467;&#12510;&#12531;&#12489;&#23450;&#32681;</span>
+    (setq migemo-command <span class="org-string">"cmigemo"</span>)
+    (setq migemo-options '(<span class="org-string">"-q"</span> <span class="org-string">"--emacs"</span>))
+    <span class="org-comment-delimiter">;; </span><span class="org-comment">&#36766;&#26360;&#25351;&#23450;</span>
+    (setq migemo-dictionary <span class="org-string">"/usr/share/cmigemo/utf-8/migemo-dict"</span>)
+    (setq migemo-coding-system 'utf-8-unix)
+    (setq migemo-user-dictionary nil)
+    (setq migemo-regex-dictionary nil))
+
+  <span class="org-comment-delimiter">;; </span><span class="org-comment">&#21021;&#26399;&#21270;&#12375;&#12390;&#12362;&#12367;</span>
+  (migemo-init))
+</pre>
+
+<p>と書きます．一応，Migemoだけでも動くように書いています．</p>
+
+<h3>参考書籍</h3>
+
+<p>すごく分かりやすいです！オススメです！</p>
+
+<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4774150029/uksk-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51M3ahu1q8L._SL160_.jpg" alt="Emacs実践入門　～思考を直感的にコード化し、開発を加速する (WEB+DB PRESS plus)" style="border: none;" /></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4774150029/uksk-22/ref=nosim/" name="amazletlink" target="_blank">Emacs実践入門　～思考を直感的にコード化し、開発を加速する (WEB+DB PRESS plus)</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/browse/ASIN/4774150029/uksk-22/ref=nosim/" title="Emacs実践入門　～思考を直感的にコード化し、開発を加速する (WEB+DB PRESS plus)" target="_blank">amazlet</a> at 12.07.15</div></div><div class="amazlet-detail">大竹 智也 <br />技術評論社 <br />売り上げランキング: 4036<br /></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4774150029/uksk-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jp で詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+  </article>
+
+</div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+</footer>
+
+
+    </body>
+</html>

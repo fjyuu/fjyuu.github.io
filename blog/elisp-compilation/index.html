@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>fjyuu.info</title>
+    <title>Elispをまとめてバイトコンパイル</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="個人的なメモを書きます">
-    <link rel="canonical" href="http://fjyuu.info/">
+    <link rel="canonical" href="http://fjyuu.info/blog/elisp-compilation">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
@@ -47,35 +47,27 @@
 
     <div class="page-content">
       <div class="wrap">
-      <div class="my-info">
-  <h1>About Me</h1>
+      <div class="post">
 
-  <ul>
-    <li><span class="flaticon flaticon-name"></span><span id="my-name">Yuki Fujii (fjyuu, ふじゅ)</span></li>
-    <li><span class="flaticon flaticon-pin"></span>Tokyo, Japan</li>
-  </ul>
+  <header class="post-header">
+    <h1>Elispをまとめてバイトコンパイル</h1>
+    <p class="meta">Aug 31, 2012</p>
+  </header>
 
-  <h2>Social Accounts</h2>
-  <ul>
-    <li><span class="flaticon flaticon-twitter"></span><a href="//twitter.com/fjyuu">Twitter</a></li>
-    <li><span class="flaticon flaticon-google-plus"></span><a href="//plus.google.com/103212612060366481151/posts">Google+</a></li>
-    <li><span class="flaticon flaticon-github"></span><a href="//github.com/fjyuu">GitHub</a></li>
-  </ul>
+  <article class="post-content">
+  <p>ElispをコンパイルするとEmacsの起動が速くなるらしい．コンパイルの方法としては，以下があるみたい．</p>
 
-  <h2>Products</h2>
-  <h3>Web Service</h3>
-  <ul>
-    <li><a href="http://graphg.net/">GraphG - ネットワークトポロジーを見る</a></li>
-    <li><a href="//byn.vc/">URL伸縮サービス Biyoon</a></li>
-    <li><a href="//mbranking.hikae.me/">地上波映画ボットRTランキング</a></li>
-  </ul>
-  <h3>Twitter Bot</h3>
-  <ul>
-    <li><a href="//twitter.com/uksk_kun">人工無脳 うこさこくん</a></li>
-    <li><a href="//fjyuu.info/movie_bot/">映画お知らせボット</a></li>
-  </ul>
+<ol>
+<li><code>M-x byte-compile-file</code>でファイルを指定してコンパイル</li>
+<li><code>C-u 0 M-x byte-recompile-directory</code>でディレクトリ以下の*.elをコンパイル</li>
+<li>コマンドラインから<code>emacs --quick --batch -f batch-byte-compile hoge.el</code>でコンパイル（-Lオプションでロードパスを追加）</li>
+</ol>
+
+<p>2番の方法がラクでいいですね．</p>
+
+  </article>
+
 </div>
-
       </div>
     </div>
 

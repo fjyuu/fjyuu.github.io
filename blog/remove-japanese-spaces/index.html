@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>org-modeが出力するHTMLから余分な改行を削除する</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="個人的なメモを書きます">
+    <link rel="canonical" href="http://fjyuu.info/blog/remove-japanese-spaces">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+</head>
+
+
+    <body>
+
+    <header class="site-header">
+
+  <div class="wrap">
+
+    <a class="site-title" href="/">fjyuu.info</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
+          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
+            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
+            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
+            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/blog/">Blog</a>
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      <div class="post">
+
+  <header class="post-header">
+    <h1>org-modeが出力するHTMLから余分な改行を削除する</h1>
+    <p class="meta">Feb 24, 2013</p>
+  </header>
+
+  <article class="post-content">
+  <p>  最近， <a href="http://orgmode.org/ja/index.html">org-mode</a> というEmacsで使えるMarkdownの超すごいバージョンみたいなのを使い始めました．
+</p>
+<p>
+  このorg-modeには，プレインテキストをHTMLやLaTeXなど，様々な形式に変換する機能があります．さらには，<a href="https://github.com/punchagan/org2blog">org2blog.el</a>という拡張を入れることで，org-modeで書いたものをそのままブログへ投稿することも可能です．すごい．
+</p>
+<p>
+  ただ，少し気になったところとして，変換されるHTMLをそのままブラウザで見るとなにかがおかしい．たとえば，以下のようにorg-modeで書いたとします．
+</p>
+
+
+
+<pre class="src src-text">&#21566;&#36649;&#12399;
+&#29483;&#12391;&#12354;&#12427;
+</pre>
+
+
+<p>
+  これをHTMLに変換すると，
+</p>
+
+
+
+<pre class="src src-html">&lt;<span class="org-function-name">p</span>&gt;
+    &#21566;&#36649;&#12399;
+    &#29483;&#12391;&#12354;&#12427;
+&lt;/<span class="org-function-name">p</span>&gt;
+</pre>
+
+
+<p>
+  になります．これをブラウザで見た場合，「吾輩は」と「猫である」の間に半角スペースが入ってしまいます．英語の場合はこの動作でいいのですが日本語の場合はここには半角スペースを入れてほしくありません．これはorg-modeが悪いわけではありません．Markdownとかでも同様の問題が起こります．（<a href="http://www.asahi-net.or.jp/~wq6k-yn/kaigyo.html">こちらのページ</a>を見る限りでは，ブラウザが悪いそうです．確かにLaTeXみたいに改行無視してくれたらいいのに・・・）
+</p>
+<p>
+  以下のページでは，この問題に対して，1文ごとに改行するという方法が提案されています．（ここで述べられているfill-paragraphは僕もよく使います．）
+</p>
+<ul>
+<li><a href="http://mikio.github.com/article/2013/02/16_org-mode.html">org-modeの段落の改行を削除したい</a>
+</li>
+</ul>
+
+
+<p>
+  しかし，HTMLの仕様のせいでorg-modeでの書き方が制限されるのはなんか嫌だ．そこで，以下のようなものを書いてみました．
+</p>
+
+
+
+<pre class="src src-emacs-lisp"><span class="org-comment-delimiter">;; </span><span class="org-comment">HTML&#20986;&#21147;&#26178;&#65292;&#28961;&#39364;&#12394;&#12473;&#12506;&#12540;&#12473;&#12434;&#21066;&#38500;</span>
+<span class="org-comment-delimiter">;; </span><span class="org-comment">jhtml-filter.pl&#12434;&#21033;&#29992; https://github.com/fjyuu/jhtml-filter</span>
+(<span class="org-keyword">when</span> (executable-find <span class="org-string">"jhtml-filter.pl"</span>)
+  (<span class="org-keyword">defun</span> <span class="org-function-name">my/org-export-jhtml-filter</span> ()
+    <span class="org-doc">"A filter which removes spaces between japanese characters"</span>
+    (<span class="org-keyword">let</span> ((filtered-html nil)
+          (tempfile (make-temp-name
+                     (expand-file-name <span class="org-string">"jhtml-filter"</span>
+                                       temporary-file-directory))))
+      (write-region (point-min) (point-max) tempfile nil 'nomsg)
+      (setq filtered-html (shell-command-to-string
+                           (concat <span class="org-string">"jhtml-filter.pl -e utf8 "</span> tempfile)))
+      (delete-region (point-min) (point-max))
+      (insert filtered-html)))
+  (add-hook 'org-export-html-final-hook 'my/org-export-jhtml-filter))
+</pre>
+
+
+<p>
+  Elispはコピペしかしたことないので，なんかマズイかもしれませんが，一応これでHTML出力時の余分な改行は削除できました．Elispで全部やるのがカッコイイと思いますが，それは（実力的に）無理だったので，自作のjhtml-filter.plというのを使っています．
+</p>
+<ul>
+<li><a href="https://github.com/fjyuu/jhtml-filter">jhtml-filter.pl - Github</a>
+</li>
+</ul>
+
+
+<p>
+  この設定を書いておくと，先ほどのorg-modeのテキストは，
+</p>
+
+
+
+<pre class="src src-html">&lt;<span class="org-function-name">p</span>&gt;
+    &#21566;&#36649;&#12399;&#29483;&#12391;&#12354;&#12427;
+&lt;/<span class="org-function-name">p</span>&gt;
+</pre>
+
+
+<p>
+  に変換されて，余分なスペースが消えます．
+</p>
+
+<h3>追記（2013.10.2.）</h3>
+
+<p>
+org-mode version 8.xでは，上記のElispが動きません．以下に書きかえてください．
+</p>
+
+<pre class="src src-emacs-lisp">(<span class="org-keyword">when</span> (executable-find <span class="org-string">"jhtml-filter.pl"</span>)
+    (<span class="org-keyword">defun</span> <span class="org-function-name">my/org-export-jhtml-filter</span> (string backend info)
+      <span class="org-doc">"A filter which removes spaces between japanese characters"</span>
+      (<span class="org-keyword">if</span> (org-export-derived-backend-p backend 'html)
+          (<span class="org-keyword">let</span> ((filtered-html nil)
+                (tempfile (make-temp-name
+                           (expand-file-name <span class="org-string">"jhtml-filter"</span>
+                                             temporary-file-directory))))
+            (write-region string nil tempfile nil 'nomsg)
+            (shell-command-to-string
+             (concat <span class="org-string">"jhtml-filter.pl -e utf8 "</span> tempfile)))))
+    (<span class="org-keyword">eval-after-load</span> 'ox-html
+      '(add-to-list 'org-export-filter-final-output-functions
+                    'my/org-export-jhtml-filter)))
+</pre>
+
+  </article>
+
+</div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+</footer>
+
+
+    </body>
+</html>
