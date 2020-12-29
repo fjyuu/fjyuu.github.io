@@ -3,8 +3,8 @@
   <channel>
     <title>fjyuu.info</title>
     <description>個人的なメモを書きます</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <link>http://fjyuu.info/</link>
+    <atom:link href="http://fjyuu.info/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
         <title>シンプルな修士論文のLaTeXテンプレート</title>
@@ -55,8 +55,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 08 Feb 2014 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/blog/master-thesis-template</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/master-thesis-template</guid>
+        <link>http://fjyuu.info/blog/master-thesis-template</link>
+        <guid isPermaLink="true">http://fjyuu.info/blog/master-thesis-template</guid>
       </item>
     
       <item>
@@ -103,8 +103,8 @@ NetworkXの&lt;a href=&quot;http://networkx.github.io/documentation/latest/refer
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 02 Oct 2013 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/blog/graphg</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/graphg</guid>
+        <link>http://fjyuu.info/blog/graphg</link>
+        <guid isPermaLink="true">http://fjyuu.info/blog/graphg</guid>
       </item>
     
       <item>
@@ -206,8 +206,8 @@ $ sudo cpanm --sudo Filesys::Notify::KQueue
 &lt;/div&gt;
 </description>
         <pubDate>Thu, 06 Jun 2013 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/blog/watch-platexpdf</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/watch-platexpdf</guid>
+        <link>http://fjyuu.info/blog/watch-platexpdf</link>
+        <guid isPermaLink="true">http://fjyuu.info/blog/watch-platexpdf</guid>
       </item>
     
       <item>
@@ -499,8 +499,8 @@ $ brew install pstoedit
 &lt;/div&gt;
 </description>
         <pubDate>Sun, 14 Apr 2013 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/blog/simple-inkscape</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/simple-inkscape</guid>
+        <link>http://fjyuu.info/blog/simple-inkscape</link>
+        <guid isPermaLink="true">http://fjyuu.info/blog/simple-inkscape</guid>
       </item>
     
       <item>
@@ -564,8 +564,8 @@ $ brew install pstoedit
 &lt;/p&gt;
 </description>
         <pubDate>Sun, 14 Apr 2013 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/blog/org-export-pdf</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/org-export-pdf</guid>
+        <link>http://fjyuu.info/blog/org-export-pdf</link>
+        <guid isPermaLink="true">http://fjyuu.info/blog/org-export-pdf</guid>
       </item>
     
       <item>
@@ -614,8 +614,8 @@ $ brew install pstoedit
 &lt;/p&gt;
 </description>
         <pubDate>Fri, 12 Apr 2013 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/blog/presentation-a4-memo</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/presentation-a4-memo</guid>
+        <link>http://fjyuu.info/blog/presentation-a4-memo</link>
+        <guid isPermaLink="true">http://fjyuu.info/blog/presentation-a4-memo</guid>
       </item>
     
       <item>
@@ -680,8 +680,8 @@ $ brew install pstoedit
 &lt;/div&gt;
 </description>
         <pubDate>Thu, 28 Mar 2013 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/blog/biyoon</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/biyoon</guid>
+        <link>http://fjyuu.info/blog/biyoon</link>
+        <guid isPermaLink="true">http://fjyuu.info/blog/biyoon</guid>
       </item>
     
       <item>
@@ -863,8 +863,8 @@ $ sudo ln -s /usr/local/lib64/xorg/modules/input/evdev_drv.so ./
 &lt;/div&gt;
 </description>
         <pubDate>Thu, 28 Feb 2013 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/blog/opensuse-osx-one-shot-modifier</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/opensuse-osx-one-shot-modifier</guid>
+        <link>http://fjyuu.info/blog/opensuse-osx-one-shot-modifier</link>
+        <guid isPermaLink="true">http://fjyuu.info/blog/opensuse-osx-one-shot-modifier</guid>
       </item>
     
       <item>
@@ -976,8 +976,8 @@ Org-modeのバージョン8.xでは，CSSの設定変数の名前が変わって
 &lt;/pre&gt;
 </description>
         <pubDate>Tue, 26 Feb 2013 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/blog/org-html-highlight</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/org-html-highlight</guid>
+        <link>http://fjyuu.info/blog/org-html-highlight</link>
+        <guid isPermaLink="true">http://fjyuu.info/blog/org-html-highlight</guid>
       </item>
     
       <item>
@@ -1095,8 +1095,8 @@ org-mode version 8.xでは，上記のElispが動きません．以下に書き�
 &lt;/pre&gt;
 </description>
         <pubDate>Sun, 24 Feb 2013 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/blog/remove-japanese-spaces</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/remove-japanese-spaces</guid>
+        <link>http://fjyuu.info/blog/remove-japanese-spaces</link>
+        <guid isPermaLink="true">http://fjyuu.info/blog/remove-japanese-spaces</guid>
       </item>
     
   </channel>
