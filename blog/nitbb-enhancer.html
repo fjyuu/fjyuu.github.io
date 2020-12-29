@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>NetworkX と D3.js を組み合わせてグラフで遊べるサービス作ってみた</title>
+    <title>名工大電子掲示板をちょっと見やすくするユーザースクリプト</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="個人的なメモを書きます">
-    <link rel="canonical" href="http://fjyuu.info/blog/graphg">
+    <link rel="canonical" href="http://localhost:4000/blog/nitbb-enhancer">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
@@ -50,51 +50,26 @@
       <div class="post">
 
   <header class="post-header">
-    <h1>NetworkX と D3.js を組み合わせてグラフで遊べるサービス作ってみた</h1>
-    <p class="meta">Oct 2, 2013</p>
+    <h1>名工大電子掲示板をちょっと見やすくするユーザースクリプト</h1>
+    <p class="meta">Apr 10, 2012</p>
   </header>
 
   <article class="post-content">
-  <div class="figure">
-<p><a href="http://graphg.net/"><img src="/img/wpid-ss.png" alt="wpid-ss.png" /></a>
-</p>
-</div>
+  <p><a href="https://rpxkeijiban.ict.nitech.ac.jp/keijibanM/login.jsp">名古屋工業大学の学生向け電子掲示板</a>をちょっと使いやすくするスクリプト．ずいぶん前に書いたのを今更公開します．名工大の人しか使えないという需要の少なさです．</p>
 
-<p>
-いろんなグラフを作って遊べるサービス <a href="http://graphg.net/">GraphG</a> というものをリリースしました．
-</p>
+<p>本スクリプトを使うと，</p>
 
-<p>
-このサービスは以下の素晴らしいライブラリを組み合わせたものです．
-</p>
+<ol>
+<li>記事の[既読]化，[強調]/[非強調]の切り替えが非同期的に行える</li>
+<li>すべての記事を一括で[既読]にできる</li>
+<li>記事を表示するためのメニューに[未読+強調]が追加される</li>
+</ol>
 
-<ul class="org-ul">
-<li><a href="http://networkx.github.io/">NetworkX</a> ： Pythonの高機能グラフライブラリ
-</li>
-<li><a href="http://d3js.org/">D3.js</a> ： データ可視化のためのJavaScriptライブラリ
-</li>
-</ul>
+<p>ようになります．</p>
 
-<p>
-NetworkXの<a href="http://networkx.github.io/documentation/latest/reference/generators.html">Graph Generator</a>でグラフの構造を作ってから，描画はD3.jsにまかせています．
-</p>
+<p>使い方などの詳細は，以下を見てください．</p>
 
-<p>
-描画には，D3.jsの<a href="https://github.com/mbostock/d3/wiki/Force-Layout">Force Layout</a>というものを利用しています．これは，グラフ描画アルゴリズムの一つで，<a href="http://byn.vc/myetr">力学モデル（Wikipedia）</a>と呼ばれるそうです．頂点をぐいぐい引っ張ったりすることができます．
-</p>
-
-<h3>作った理由</h3>
-
-<p>
-グラフの定義を，数式や言葉で説明されても分かりにくいからです．実際につくってみる事で直感的に理解することができるはず！
-</p>
-
-<h3>予定</h3>
-
-<ul class="org-ul">
-<li>他のグラフも追加したい
-</li>
-</ul>
+<p><a href="https://github.com/fjyuu/nit-bb-enhancer/"><em>NIT BB Enhancer</em></a></p>
 
   </article>
 

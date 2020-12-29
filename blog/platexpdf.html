@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>A4メモ用紙テンプレートPDF</title>
+    <title>platex して dvipdfmx するスクリプト</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="個人的なメモを書きます">
-    <link rel="canonical" href="http://fjyuu.info/blog/a4-memo">
+    <link rel="canonical" href="http://localhost:4000/blog/platexpdf">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
@@ -50,30 +50,22 @@
       <div class="post">
 
   <header class="post-header">
-    <h1>A4メモ用紙テンプレートPDF</h1>
-    <p class="meta">Jun 1, 2012</p>
+    <h1>platex して dvipdfmx するスクリプト</h1>
+    <p class="meta">May 12, 2012</p>
   </header>
 
   <article class="post-content">
-  <p><img src="/img/A4memo.png" alt="" title="A4memo" width="312" height="184" class="alignnone size-full wp-image-44" /></p>
+  <p>TeXファイルからPDFを作成するときは，</p>
 
-<p>僕はよくA4のコピー用紙を，メモ用紙（落書き帳？）として使うんですが，真っ白なまま使うのも少し味気ない．そこで，A4横書きメモ用紙テンプレを作ってみました．</p>
+<pre class="src src-sh">$ platex hoge.tex
+$ dvipdfmx hoge.dvi
+</pre>
 
-<ul>
-<li><a href='/pdf/dairy-memo.pdf'>A4横書きメモ用紙テンプレート（PDF）</a></li>
-<li><a href='/pdf/dairy-memo-w.pdf'>A4横書きメモ用紙テンプレート裏表印刷用（PDF）</a></li>
-</ul>
+<p>のようにplatexコマンドとdvipdfmxコマンドを実行します．これを一度に行うスクリプトをPerlで書いてみました．文字コードを推測してくれたり，フォントマップをオプションで指定できたりします．</p>
 
-<p>穴あけパンチ用マーカーが付いてるのが特徴です．パンチで穴を開けてファイルに保存しておくと，後から見返すことができて意外と便利です．</p>
+<p><a href="https://github.com/fjyuu/platexpdf">platexpdf - github</a></p>
 
-<p>LaTeXのソースをGistに置いておきます．自分好みに修正してやってください．</p>
-
-<p><a href="https://gist.github.com/fjyuu/2692282">A4-memo</a></p>
-
-<h3>追記</h3>
-<p>
-<a href="/presentation-a4-memo/">枠を入れたA4メモテンプレートも作ってみました</a>
-</p>
+<p>使い方は<a href="https://github.com/fjyuu/platexpdf/blob/master/README.md">README</a>を見てください．環境はTeX Liveがインストールされていることを想定しています．ちなみに，TeX Liveについては<a href="http://www.fugenji.org/~thomas/texlive-guide/">こちら</a>がとてもよくまとまっていて分かりやすいです．</p>
 
   </article>
 

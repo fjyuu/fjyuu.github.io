@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ubuntuのドキュメント・ビューアをコマンドラインから</title>
+    <title>テレビ映画お知らせボット</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="個人的なメモを書きます">
-    <link rel="canonical" href="http://fjyuu.info/blog/ubuntu-document-viewer">
+    <link rel="canonical" href="http://localhost:4000/blog/movie_bot">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
@@ -50,17 +50,44 @@
       <div class="post">
 
   <header class="post-header">
-    <h1>Ubuntuのドキュメント・ビューアをコマンドラインから</h1>
-    <p class="meta">May 12, 2011</p>
+    <h1>テレビ映画お知らせボット</h1>
+    <p class="meta">Feb 19, 2011</p>
   </header>
 
   <article class="post-content">
-  <p>Ubuntuのドキュメント・ビューアの正体はEvinceなので，以下のようにコマンドラインから呼び出せます．</p>
+  <p>地上波映画放送お知らせボットはその名のとおり地上波で放送される映画をお知らせするツイッターボットです．番組ごとに別々のアカウントがあります．</p>
 
-<pre class="src src-sh">$ evince hoge.pdf
-</pre>
+<dl>
+<dt><a href="http://twitter.com/kinyo_movie">@kinyo_movie</a></dt>
+<dd>金曜ロードショーお知らせボット</dd>
+<dt><a href="http://twitter.com/doyo_movie">@doyo_movie</a></dt>
+<dd>土曜プレミアムお知らせボット</dd>
+<dt><a href="http://twitter.com/nichiyo_movie">@nichiyo_movie</a></dt>
+<dd>日曜洋画劇場お知らせボット</dd>
+<dt><a href="http://twitter.com/suiyo_movie">@suiyo_movie</a></dt>
+<dd>水曜プレミアシネマお知らせボット（2012/4/1公開）</dd>
+<dt><a href="http://twitter.com/eiga_tengoku">@eiga_tengoku</a></dt>
+<dd>映画天国お知らせボット（2012/6/5公開）</dd>
+</dl>
 
-<p>AdobeReaderと違って，EvinceはPDFファイルをロックしません．ファイルを開いたままそのファイルを更新できるので，TeXをPDF出力して確認したりするときには便利です．</p>
+<h3>地上波じゃないけど作ってみた</h3>
+
+<p>地上波の番組ではありませんが，要望があったのでBSの映画番組お知らせボットも作ってみました．</p>
+
+<dl>
+<dt><a href="http://twitter.com/bs_premium">@bs_premium</a></dt>
+<dd>NHK BSプレミアムシネマお知らせボット（2012/7/2公開）</dd>
+</dl>
+
+<h3>ランキング形式で過去放送履歴が見れるサイト作ってみた</h3>
+
+<p>たくさんのフォローありがとうございます．いままでの放送履歴をRT数が多い順に集計するサイトを作ってみました．</p>
+
+<ul>
+<li><a href="http://mbranking.hikae.me/">地上波映画ボットRTランキング</a>（2012/9/12公開）</li>
+</ul>
+
+<p>いまのところ水曜，金曜，土曜，日曜ボットに対応しています．</p>
 
   </article>
 

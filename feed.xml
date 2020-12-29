@@ -1,14 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>fjyuu.info</title>
-    <description>個人的なメモを書きます</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    
-      <item>
-        <title>シンプルな修士論文のLaTeXテンプレート</title>
-        <description>&lt;p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-30T03:19:17+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">fjyuu.info</title><subtitle>個人的なメモを書きます</subtitle><entry><title type="html">シンプルな修士論文のLaTeXテンプレート</title><link href="http://localhost:4000/blog/master-thesis-template" rel="alternate" type="text/html" title="シンプルな修士論文のLaTeXテンプレート" /><published>2014-02-08T00:00:00+09:00</published><updated>2014-02-08T00:00:00+09:00</updated><id>http://localhost:4000/blog/master-thesis-template</id><content type="html" xml:base="http://localhost:4000/blog/master-thesis-template">&lt;p&gt;
 自分が修士論文を書いたときに使ったLaTeXテンプレートです．
 &lt;/p&gt;
 
@@ -52,16 +42,7 @@
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;&lt;a href=&quot;http://d.hatena.ne.jp/yosshi71jp/20101210/1292005429&quot;&gt;卒論をTeXフォーマットなしから書くためのtips - シコウサクゴ（）&lt;/a&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 08 Feb 2014 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/blog/master-thesis-template</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/master-thesis-template</guid>
-      </item>
-    
-      <item>
-        <title>NetworkX と D3.js を組み合わせてグラフで遊べるサービス作ってみた</title>
-        <description>&lt;div class=&quot;figure&quot;&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="スクリプト" /><summary type="html">自分が修士論文を書いたときに使ったLaTeXテンプレートです．</summary></entry><entry><title type="html">NetworkX と D3.js を組み合わせてグラフで遊べるサービス作ってみた</title><link href="http://localhost:4000/blog/graphg" rel="alternate" type="text/html" title="NetworkX と D3.js を組み合わせてグラフで遊べるサービス作ってみた" /><published>2013-10-02T00:00:00+09:00</published><updated>2013-10-02T00:00:00+09:00</updated><id>http://localhost:4000/blog/graphg</id><content type="html" xml:base="http://localhost:4000/blog/graphg">&lt;div class=&quot;figure&quot;&gt;
 &lt;p&gt;&lt;a href=&quot;http://graphg.net/&quot;&gt;&lt;img src=&quot;/img/wpid-ss.png&quot; alt=&quot;wpid-ss.png&quot; /&gt;&lt;/a&gt;
 &lt;/p&gt;
 &lt;/div&gt;
@@ -100,16 +81,7 @@ NetworkXの&lt;a href=&quot;http://networkx.github.io/documentation/latest/refer
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;他のグラフも追加したい
 &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 02 Oct 2013 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/blog/graphg</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/graphg</guid>
-      </item>
-    
-      <item>
-        <title>ファイルが更新されたら自動で platex して dvipdfmx する</title>
-        <description>&lt;p&gt;  LaTeXを手動でコンパイルするのめんどくさいですよね．
+&lt;/ul&gt;</content><author><name></name></author><category term="ウェブサービス" /><summary type="html"></summary></entry><entry><title type="html">ファイルが更新されたら自動で platex して dvipdfmx する</title><link href="http://localhost:4000/blog/watch-platexpdf" rel="alternate" type="text/html" title="ファイルが更新されたら自動で platex して dvipdfmx する" /><published>2013-06-06T00:00:00+09:00</published><updated>2013-06-06T00:00:00+09:00</updated><id>http://localhost:4000/blog/watch-platexpdf</id><content type="html" xml:base="http://localhost:4000/blog/watch-platexpdf">&lt;p&gt;  LaTeXを手動でコンパイルするのめんどくさいですよね．
 &lt;/p&gt;
 &lt;p&gt;
   LaTeXのコンパイルを自動化するためには， &lt;a href=&quot;http://d.hatena.ne.jp/hayamiz/20081208/1228727272&quot;&gt;OMakeを使う&lt;/a&gt; といった方法があります．OMakeは依存ファイルの更新を感知して自動でコンパイルを行ってくれます．
@@ -203,16 +175,63 @@ $ sudo cpanm --sudo Filesys::Notify::KQueue
 &lt;/pre&gt;
 
 &lt;/div&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Thu, 06 Jun 2013 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/blog/watch-platexpdf</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/watch-platexpdf</guid>
-      </item>
-    
-      <item>
-        <title>Inkscapeで理系の作図</title>
-        <description>&lt;p&gt;  研究室でのプレゼンや資料作成で使う図はいつも &lt;a href=&quot;http://inkscape.org/&quot;&gt;Inkscape&lt;/a&gt; を使って描いています．
+&lt;/div&gt;</content><author><name></name></author><category term="スクリプト" /><summary type="html">LaTeXを手動でコンパイルするのめんどくさいですよね． LaTeXのコンパイルを自動化するためには， OMakeを使う といった方法があります．OMakeは依存ファイルの更新を感知して自動でコンパイルを行ってくれます． OMakeはBibTeXとかの依存関係を自動で判断してくれるので便利なんですが，簡単なレポートを書いてるときとかは，OMakefileとかOMakerootとか用意するのすらめんどくさいですよね．余分に管理するファイル増えちゃいますし． そこで，以前作ったplatexpdf にファイルを監視して自動コンパイルするオプションを追加してみました． platexpdf - GitHub</summary></entry><entry><title type="html">org-modeで日本語PDFを出力する</title><link href="http://localhost:4000/blog/org-export-pdf" rel="alternate" type="text/html" title="org-modeで日本語PDFを出力する" /><published>2013-04-14T00:00:00+09:00</published><updated>2013-04-14T00:00:00+09:00</updated><id>http://localhost:4000/blog/org-export-pdf</id><content type="html" xml:base="http://localhost:4000/blog/org-export-pdf">&lt;p&gt;  &lt;a href=&quot;http://fjyuu.info/platexpdf/&quot;&gt;platex して dvipdfmx するスクリプト&lt;/a&gt;が奥村先生の&lt;a href=&quot;http://oku.edu.mie-u.ac.jp/~okumura/texwiki/?Make&quot;&gt;TeX Wiki&lt;/a&gt;からリンクされている…！
+&lt;/p&gt;
+&lt;p&gt;
+  昔のコードが恥ずかしくなったので，少し書きなおしてみました．
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/fjyuu/platexpdf&quot;&gt;platexpdf – github&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;
+  ついでと言ってはなんですが，今回はこのスクリプトを使って，Emacsのorg-modeでPDFを出力してみます．
+&lt;/p&gt;
+&lt;p&gt;
+  org-modeにはPDFを出力する機能がありますが，デフォルトだと日本語を含むファイルを扱うことができません．
+&lt;/p&gt;
+&lt;p&gt;
+  そこで，日本語LaTeXに対応させるために，まず，最新のTeX環境であるTeX Liveをインストールします．Linux・Macの方は，&lt;a href=&quot;http://www.fugenji.org/~thomas/texlive-guide/&quot;&gt;こちら&lt;/a&gt; のサイトがとても参考になると思います．Macの方は &lt;a href=&quot;http://tug.org/mactex/&quot;&gt;MacTeX&lt;/a&gt; でもいいと思います．Windowsはどうやればいいのか知りません．
+&lt;/p&gt;
+&lt;p&gt;
+  TeX環境が整えば，先ほどの &lt;code&gt;platexpdf&lt;/code&gt; をパスの通ったところにおいて，以下のようなEmacsの設定を追加します．
+&lt;/p&gt;
+
+
+
+&lt;pre class=&quot;src src-emacs-lisp&quot;&gt;(&lt;span class=&quot;org-keyword&quot;&gt;when&lt;/span&gt; (&lt;span class=&quot;org-keyword&quot;&gt;require&lt;/span&gt; '&lt;span class=&quot;org-constant&quot;&gt;org-install&lt;/span&gt; nil t)
+  &lt;span class=&quot;org-comment-delimiter&quot;&gt;;; &lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;LaTeX article class&lt;/span&gt;
+  (setq org-export-latex-classes
+        '((&lt;span class=&quot;org-string&quot;&gt;&quot;article&quot;&lt;/span&gt;
+           &lt;span class=&quot;org-string&quot;&gt;&quot;\\documentclass[11pt,a4paper]{jsarticle}&lt;/span&gt;
+&lt;span class=&quot;org-string&quot;&gt;\\usepackage{amsmath}&lt;/span&gt;
+&lt;span class=&quot;org-string&quot;&gt;\\usepackage{amsthm}&lt;/span&gt;
+&lt;span class=&quot;org-string&quot;&gt;\\usepackage{bm}&lt;/span&gt;
+&lt;span class=&quot;org-string&quot;&gt;\\usepackage[dvipdfmx,hiresbb]{graphicx}&lt;/span&gt;
+&lt;span class=&quot;org-string&quot;&gt;\\usepackage[dvipdfmx]{color}&quot;&lt;/span&gt;
+           (&lt;span class=&quot;org-string&quot;&gt;&quot;\\section{%s}&quot;&lt;/span&gt; . &lt;span class=&quot;org-string&quot;&gt;&quot;\\section*{%s}&quot;&lt;/span&gt;)
+           (&lt;span class=&quot;org-string&quot;&gt;&quot;\\subsection{%s}&quot;&lt;/span&gt; . &lt;span class=&quot;org-string&quot;&gt;&quot;\\subsection*{%s}&quot;&lt;/span&gt;)
+           (&lt;span class=&quot;org-string&quot;&gt;&quot;\\subsubsection{%s}&quot;&lt;/span&gt; . &lt;span class=&quot;org-string&quot;&gt;&quot;\\subsubsection*{%s}&quot;&lt;/span&gt;)
+           (&lt;span class=&quot;org-string&quot;&gt;&quot;\\paragraph{%s}&quot;&lt;/span&gt; . &lt;span class=&quot;org-string&quot;&gt;&quot;\\paragraph*{%s}&quot;&lt;/span&gt;)
+           (&lt;span class=&quot;org-string&quot;&gt;&quot;\\subparagraph{%s}&quot;&lt;/span&gt; . &lt;span class=&quot;org-string&quot;&gt;&quot;\\subparagraph*{%s}&quot;&lt;/span&gt;))))
+
+  &lt;span class=&quot;org-comment-delimiter&quot;&gt;;; &lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;LaTeX&amp;#12363;&amp;#12425;PDF&amp;#12434;&amp;#20316;&amp;#25104;&amp;#12377;&amp;#12427;&amp;#12467;&amp;#12510;&amp;#12531;&amp;#12489;&lt;/span&gt;
+  (&lt;span class=&quot;org-keyword&quot;&gt;when&lt;/span&gt; (executable-find &lt;span class=&quot;org-string&quot;&gt;&quot;platexpdf&quot;&lt;/span&gt;)
+    (setq org-latex-to-pdf-process '(&lt;span class=&quot;org-string&quot;&gt;&quot;platexpdf %f&quot;&lt;/span&gt; &lt;span class=&quot;org-string&quot;&gt;&quot;platexpdf %f&quot;&lt;/span&gt;)))
+
+  &lt;span class=&quot;org-comment-delimiter&quot;&gt;;; &lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;PDF&amp;#12434;&amp;#38283;&amp;#12367;&amp;#12467;&amp;#12510;&amp;#12531;&amp;#12489;&lt;/span&gt;
+  (&lt;span class=&quot;org-keyword&quot;&gt;eval-after-load&lt;/span&gt; &lt;span class=&quot;org-string&quot;&gt;&quot;org&quot;&lt;/span&gt;
+    '(&lt;span class=&quot;org-keyword&quot;&gt;progn&lt;/span&gt;
+       (delete '(&lt;span class=&quot;org-string&quot;&gt;&quot;\\.pdf\\'&quot;&lt;/span&gt; . default) org-file-apps)
+       (add-to-list 'org-file-apps '(&lt;span class=&quot;org-string&quot;&gt;&quot;\\.pdf\\'&quot;&lt;/span&gt; . &lt;span class=&quot;org-string&quot;&gt;&quot;okular %s&quot;&lt;/span&gt;)))))
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+  これで，org-modeで日本語PDFが出力できるようになるはずです．
+&lt;/p&gt;</content><author><name></name></author><category term="Emacs" /><summary type="html">platex して dvipdfmx するスクリプトが奥村先生のTeX Wikiからリンクされている…！ 昔のコードが恥ずかしくなったので，少し書きなおしてみました． platexpdf – github</summary></entry><entry><title type="html">Inkscapeで理系の作図</title><link href="http://localhost:4000/blog/simple-inkscape" rel="alternate" type="text/html" title="Inkscapeで理系の作図" /><published>2013-04-14T00:00:00+09:00</published><updated>2013-04-14T00:00:00+09:00</updated><id>http://localhost:4000/blog/simple-inkscape</id><content type="html" xml:base="http://localhost:4000/blog/simple-inkscape">&lt;p&gt;  研究室でのプレゼンや資料作成で使う図はいつも &lt;a href=&quot;http://inkscape.org/&quot;&gt;Inkscape&lt;/a&gt; を使って描いています．
 &lt;/p&gt;
 &lt;p&gt;
   個人的に研究で使う図は，
@@ -496,81 +515,7 @@ $ brew install pstoedit
      を使うと便利です．
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Sun, 14 Apr 2013 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/blog/simple-inkscape</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/simple-inkscape</guid>
-      </item>
-    
-      <item>
-        <title>org-modeで日本語PDFを出力する</title>
-        <description>&lt;p&gt;  &lt;a href=&quot;http://fjyuu.info/platexpdf/&quot;&gt;platex して dvipdfmx するスクリプト&lt;/a&gt;が奥村先生の&lt;a href=&quot;http://oku.edu.mie-u.ac.jp/~okumura/texwiki/?Make&quot;&gt;TeX Wiki&lt;/a&gt;からリンクされている…！
-&lt;/p&gt;
-&lt;p&gt;
-  昔のコードが恥ずかしくなったので，少し書きなおしてみました．
-&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/fjyuu/platexpdf&quot;&gt;platexpdf – github&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;p&gt;
-  ついでと言ってはなんですが，今回はこのスクリプトを使って，Emacsのorg-modeでPDFを出力してみます．
-&lt;/p&gt;
-&lt;p&gt;
-  org-modeにはPDFを出力する機能がありますが，デフォルトだと日本語を含むファイルを扱うことができません．
-&lt;/p&gt;
-&lt;p&gt;
-  そこで，日本語LaTeXに対応させるために，まず，最新のTeX環境であるTeX Liveをインストールします．Linux・Macの方は，&lt;a href=&quot;http://www.fugenji.org/~thomas/texlive-guide/&quot;&gt;こちら&lt;/a&gt; のサイトがとても参考になると思います．Macの方は &lt;a href=&quot;http://tug.org/mactex/&quot;&gt;MacTeX&lt;/a&gt; でもいいと思います．Windowsはどうやればいいのか知りません．
-&lt;/p&gt;
-&lt;p&gt;
-  TeX環境が整えば，先ほどの &lt;code&gt;platexpdf&lt;/code&gt; をパスの通ったところにおいて，以下のようなEmacsの設定を追加します．
-&lt;/p&gt;
-
-
-
-&lt;pre class=&quot;src src-emacs-lisp&quot;&gt;(&lt;span class=&quot;org-keyword&quot;&gt;when&lt;/span&gt; (&lt;span class=&quot;org-keyword&quot;&gt;require&lt;/span&gt; '&lt;span class=&quot;org-constant&quot;&gt;org-install&lt;/span&gt; nil t)
-  &lt;span class=&quot;org-comment-delimiter&quot;&gt;;; &lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;LaTeX article class&lt;/span&gt;
-  (setq org-export-latex-classes
-        '((&lt;span class=&quot;org-string&quot;&gt;&quot;article&quot;&lt;/span&gt;
-           &lt;span class=&quot;org-string&quot;&gt;&quot;\\documentclass[11pt,a4paper]{jsarticle}&lt;/span&gt;
-&lt;span class=&quot;org-string&quot;&gt;\\usepackage{amsmath}&lt;/span&gt;
-&lt;span class=&quot;org-string&quot;&gt;\\usepackage{amsthm}&lt;/span&gt;
-&lt;span class=&quot;org-string&quot;&gt;\\usepackage{bm}&lt;/span&gt;
-&lt;span class=&quot;org-string&quot;&gt;\\usepackage[dvipdfmx,hiresbb]{graphicx}&lt;/span&gt;
-&lt;span class=&quot;org-string&quot;&gt;\\usepackage[dvipdfmx]{color}&quot;&lt;/span&gt;
-           (&lt;span class=&quot;org-string&quot;&gt;&quot;\\section{%s}&quot;&lt;/span&gt; . &lt;span class=&quot;org-string&quot;&gt;&quot;\\section*{%s}&quot;&lt;/span&gt;)
-           (&lt;span class=&quot;org-string&quot;&gt;&quot;\\subsection{%s}&quot;&lt;/span&gt; . &lt;span class=&quot;org-string&quot;&gt;&quot;\\subsection*{%s}&quot;&lt;/span&gt;)
-           (&lt;span class=&quot;org-string&quot;&gt;&quot;\\subsubsection{%s}&quot;&lt;/span&gt; . &lt;span class=&quot;org-string&quot;&gt;&quot;\\subsubsection*{%s}&quot;&lt;/span&gt;)
-           (&lt;span class=&quot;org-string&quot;&gt;&quot;\\paragraph{%s}&quot;&lt;/span&gt; . &lt;span class=&quot;org-string&quot;&gt;&quot;\\paragraph*{%s}&quot;&lt;/span&gt;)
-           (&lt;span class=&quot;org-string&quot;&gt;&quot;\\subparagraph{%s}&quot;&lt;/span&gt; . &lt;span class=&quot;org-string&quot;&gt;&quot;\\subparagraph*{%s}&quot;&lt;/span&gt;))))
-
-  &lt;span class=&quot;org-comment-delimiter&quot;&gt;;; &lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;LaTeX&amp;#12363;&amp;#12425;PDF&amp;#12434;&amp;#20316;&amp;#25104;&amp;#12377;&amp;#12427;&amp;#12467;&amp;#12510;&amp;#12531;&amp;#12489;&lt;/span&gt;
-  (&lt;span class=&quot;org-keyword&quot;&gt;when&lt;/span&gt; (executable-find &lt;span class=&quot;org-string&quot;&gt;&quot;platexpdf&quot;&lt;/span&gt;)
-    (setq org-latex-to-pdf-process '(&lt;span class=&quot;org-string&quot;&gt;&quot;platexpdf %f&quot;&lt;/span&gt; &lt;span class=&quot;org-string&quot;&gt;&quot;platexpdf %f&quot;&lt;/span&gt;)))
-
-  &lt;span class=&quot;org-comment-delimiter&quot;&gt;;; &lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;PDF&amp;#12434;&amp;#38283;&amp;#12367;&amp;#12467;&amp;#12510;&amp;#12531;&amp;#12489;&lt;/span&gt;
-  (&lt;span class=&quot;org-keyword&quot;&gt;eval-after-load&lt;/span&gt; &lt;span class=&quot;org-string&quot;&gt;&quot;org&quot;&lt;/span&gt;
-    '(&lt;span class=&quot;org-keyword&quot;&gt;progn&lt;/span&gt;
-       (delete '(&lt;span class=&quot;org-string&quot;&gt;&quot;\\.pdf\\'&quot;&lt;/span&gt; . default) org-file-apps)
-       (add-to-list 'org-file-apps '(&lt;span class=&quot;org-string&quot;&gt;&quot;\\.pdf\\'&quot;&lt;/span&gt; . &lt;span class=&quot;org-string&quot;&gt;&quot;okular %s&quot;&lt;/span&gt;)))))
-&lt;/pre&gt;
-
-
-&lt;p&gt;
-  これで，org-modeで日本語PDFが出力できるようになるはずです．
-&lt;/p&gt;
-</description>
-        <pubDate>Sun, 14 Apr 2013 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/blog/org-export-pdf</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/org-export-pdf</guid>
-      </item>
-    
-      <item>
-        <title>シンプルA4メモテンプレートに枠線を入れてみた</title>
-        <description>&lt;p&gt;  &lt;img src=&quot;/img/wpid-memo-ss1.png&quot;  alt=&quot;file:///home/fjyuu/Dropbox/blog/memo-ss.png&quot; /&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="Linux" /><summary type="html">研究室でのプレゼンや資料作成で使う図はいつも Inkscape を使って描いています． 個人的に研究で使う図は， 丸 四角 矢印 文字 数式</summary></entry><entry><title type="html">シンプルA4メモテンプレートに枠線を入れてみた</title><link href="http://localhost:4000/blog/presentation-a4-memo" rel="alternate" type="text/html" title="シンプルA4メモテンプレートに枠線を入れてみた" /><published>2013-04-12T00:00:00+09:00</published><updated>2013-04-12T00:00:00+09:00</updated><id>http://localhost:4000/blog/presentation-a4-memo</id><content type="html" xml:base="http://localhost:4000/blog/presentation-a4-memo">&lt;p&gt;  &lt;img src=&quot;/img/wpid-memo-ss1.png&quot;  alt=&quot;file:///home/fjyuu/Dropbox/blog/memo-ss.png&quot; /&gt;
 &lt;/p&gt;
 &lt;p&gt;
   &lt;a href=&quot;/a4-memo/&quot;&gt;以前作ったA4メモ&lt;/a&gt; を以下のように修正しました．
@@ -611,16 +556,7 @@ $ brew install pstoedit
 &lt;/p&gt;
 &lt;p&gt;
   なお，今回はLaTeXを使っていないのでソースはないです．
-&lt;/p&gt;
-</description>
-        <pubDate>Fri, 12 Apr 2013 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/blog/presentation-a4-memo</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/presentation-a4-memo</guid>
-      </item>
-    
-      <item>
-        <title>間違いにくさを追求した短縮URLサービス「Biyoon」</title>
-        <description>&lt;p&gt;  &lt;img src=&quot;/img/wpid-biyoon-logo1.png&quot;  alt=&quot;file:///home/fjyuu/repository/web-site/biyoon/public/u/img/biyoon-logo.png&quot; /&gt;
+&lt;/p&gt;</content><author><name></name></author><category term="生活" /><summary type="html">以前作ったA4メモ を以下のように修正しました． 枠なしA4メモ（PDF） 2×2の枠付A4メモ（PDF） 4×4の枠付A4メモ（PDF）</summary></entry><entry><title type="html">間違いにくさを追求した短縮URLサービス「Biyoon」</title><link href="http://localhost:4000/blog/biyoon" rel="alternate" type="text/html" title="間違いにくさを追求した短縮URLサービス「Biyoon」" /><published>2013-03-28T00:00:00+09:00</published><updated>2013-03-28T00:00:00+09:00</updated><id>http://localhost:4000/blog/biyoon</id><content type="html" xml:base="http://localhost:4000/blog/biyoon">&lt;p&gt;  &lt;img src=&quot;/img/wpid-biyoon-logo1.png&quot;  alt=&quot;file:///home/fjyuu/repository/web-site/biyoon/public/u/img/biyoon-logo.png&quot; /&gt;
 &lt;/p&gt;
 &lt;p&gt;
   ちょっと間違えても大丈夫！新しい短縮URLサービス「Biyoon」を公開しました！
@@ -677,16 +613,7 @@ $ brew install pstoedit
    短縮されたURLに誤り検査用の文字列を追加することで，数文字の &lt;strong&gt;誤りを    訂正&lt;/strong&gt; し，元の正しいURLに転送することができます．この機能は，地上デジタル放送の信号誤り訂正などでも利用されている，リードソロモン符号を用いることで実現しています．
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Thu, 28 Mar 2013 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/blog/biyoon</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/biyoon</guid>
-      </item>
-    
-      <item>
-        <title>openSUSE と OSX で One Shot Modifier</title>
-        <description>&lt;p&gt;  openSUSE 12.2とOSX Mountain Lionに， One Shot Modifierを導入したときのメモです．
+&lt;/div&gt;</content><author><name></name></author><category term="ウェブサービス" /><summary type="html">ちょっと間違えても大丈夫！新しい短縮URLサービス「Biyoon」を公開しました！ Biyoon</summary></entry><entry><title type="html">openSUSE と OSX で One Shot Modifier</title><link href="http://localhost:4000/blog/opensuse-osx-one-shot-modifier" rel="alternate" type="text/html" title="openSUSE と OSX で One Shot Modifier" /><published>2013-02-28T00:00:00+09:00</published><updated>2013-02-28T00:00:00+09:00</updated><id>http://localhost:4000/blog/opensuse-osx-one-shot-modifier</id><content type="html" xml:base="http://localhost:4000/blog/opensuse-osx-one-shot-modifier">&lt;p&gt;  openSUSE 12.2とOSX Mountain Lionに， One Shot Modifierを導入したときのメモです．
 &lt;/p&gt;
 
 &lt;div id=&quot;outline-container-1&quot; class=&quot;outline-3&quot;&gt;
@@ -860,16 +787,7 @@ $ sudo ln -s /usr/local/lib64/xorg/modules/input/evdev_drv.so ./
 &lt;p&gt;
    などのソフトでOne Shot Modifierを実現できるみたいです．
 &lt;/p&gt;&lt;/div&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Thu, 28 Feb 2013 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/blog/opensuse-osx-one-shot-modifier</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/opensuse-osx-one-shot-modifier</guid>
-      </item>
-    
-      <item>
-        <title>org-modeでコードハイライトされたHTMLを出力する</title>
-        <description>&lt;p&gt;  org-modeで，コードハイライトされたHTMLを出力する方法のメモです．
+&lt;/div&gt;</content><author><name></name></author><category term="Linux" /><summary type="html">openSUSE 12.2とOSX Mountain Lionに， One Shot Modifierを導入したときのメモです．</summary></entry><entry><title type="html">org-modeでコードハイライトされたHTMLを出力する</title><link href="http://localhost:4000/blog/org-html-highlight" rel="alternate" type="text/html" title="org-modeでコードハイライトされたHTMLを出力する" /><published>2013-02-26T00:00:00+09:00</published><updated>2013-02-26T00:00:00+09:00</updated><id>http://localhost:4000/blog/org-html-highlight</id><content type="html" xml:base="http://localhost:4000/blog/org-html-highlight">&lt;p&gt;  org-modeで，コードハイライトされたHTMLを出力する方法のメモです．
 &lt;/p&gt;
 &lt;p&gt;
   とりあえず，package.elかなにかを使って
@@ -973,16 +891,7 @@ Org-modeのバージョン8.xでは，CSSの設定変数の名前が変わって
 &lt;/p&gt;
 
 &lt;pre class=&quot;src src-emacs-lisp&quot;&gt;(setq org-html-htmlize-output-type 'css)
-&lt;/pre&gt;
-</description>
-        <pubDate>Tue, 26 Feb 2013 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/blog/org-html-highlight</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/org-html-highlight</guid>
-      </item>
-    
-      <item>
-        <title>org-modeが出力するHTMLから余分な改行を削除する</title>
-        <description>&lt;p&gt;  最近， &lt;a href=&quot;http://orgmode.org/ja/index.html&quot;&gt;org-mode&lt;/a&gt; というEmacsで使えるMarkdownの超すごいバージョンみたいなのを使い始めました．
+&lt;/pre&gt;</content><author><name></name></author><category term="Emacs" /><summary type="html">org-modeで，コードハイライトされたHTMLを出力する方法のメモです． とりあえず，package.elかなにかを使って org htmlize</summary></entry><entry><title type="html">org-modeが出力するHTMLから余分な改行を削除する</title><link href="http://localhost:4000/blog/remove-japanese-spaces" rel="alternate" type="text/html" title="org-modeが出力するHTMLから余分な改行を削除する" /><published>2013-02-24T00:00:00+09:00</published><updated>2013-02-24T00:00:00+09:00</updated><id>http://localhost:4000/blog/remove-japanese-spaces</id><content type="html" xml:base="http://localhost:4000/blog/remove-japanese-spaces">&lt;p&gt;  最近， &lt;a href=&quot;http://orgmode.org/ja/index.html&quot;&gt;org-mode&lt;/a&gt; というEmacsで使えるMarkdownの超すごいバージョンみたいなのを使い始めました．
 &lt;/p&gt;
 &lt;p&gt;
   このorg-modeには，プレインテキストをHTMLやLaTeXなど，様々な形式に変換する機能があります．さらには，&lt;a href=&quot;https://github.com/punchagan/org2blog&quot;&gt;org2blog.el&lt;/a&gt;という拡張を入れることで，org-modeで書いたものをそのままブログへ投稿することも可能です．すごい．
@@ -1092,12 +1001,4 @@ org-mode version 8.xでは，上記のElispが動きません．以下に書き�
     (&lt;span class=&quot;org-keyword&quot;&gt;eval-after-load&lt;/span&gt; 'ox-html
       '(add-to-list 'org-export-filter-final-output-functions
                     'my/org-export-jhtml-filter)))
-&lt;/pre&gt;
-</description>
-        <pubDate>Sun, 24 Feb 2013 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/blog/remove-japanese-spaces</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/remove-japanese-spaces</guid>
-      </item>
-    
-  </channel>
-</rss>
+&lt;/pre&gt;</content><author><name></name></author><category term="Emacs" /><summary type="html">最近， org-mode というEmacsで使えるMarkdownの超すごいバージョンみたいなのを使い始めました． このorg-modeには，プレインテキストをHTMLやLaTeXなど，様々な形式に変換する機能があります．さらには，org2blog.elという拡張を入れることで，org-modeで書いたものをそのままブログへ投稿することも可能です．すごい． ただ，少し気になったところとして，変換されるHTMLをそのままブラウザで見るとなにかがおかしい．たとえば，以下のようにorg-modeで書いたとします．</summary></entry></feed>

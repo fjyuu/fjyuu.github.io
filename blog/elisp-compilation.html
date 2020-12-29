@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>シンプルな修士論文のLaTeXテンプレート</title>
+    <title>Elispをまとめてバイトコンパイル</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="個人的なメモを書きます">
-    <link rel="canonical" href="http://fjyuu.info/blog/master-thesis-template">
+    <link rel="canonical" href="http://localhost:4000/blog/elisp-compilation">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
@@ -50,56 +50,20 @@
       <div class="post">
 
   <header class="post-header">
-    <h1>シンプルな修士論文のLaTeXテンプレート</h1>
-    <p class="meta">Feb 8, 2014</p>
+    <h1>Elispをまとめてバイトコンパイル</h1>
+    <p class="meta">Aug 31, 2012</p>
   </header>
 
   <article class="post-content">
-  <p>
-自分が修士論文を書いたときに使ったLaTeXテンプレートです．
-</p>
+  <p>ElispをコンパイルするとEmacsの起動が速くなるらしい．コンパイルの方法としては，以下があるみたい．</p>
 
-<ul class="org-ul">
-<li><a href="https://github.com/fjyuu/master-thesis-template">master-thesis-template - GitHub</a>
-</li>
-</ul>
+<ol>
+<li><code>M-x byte-compile-file</code>でファイルを指定してコンパイル</li>
+<li><code>C-u 0 M-x byte-recompile-directory</code>でディレクトリ以下の*.elをコンパイル</li>
+<li>コマンドラインから<code>emacs --quick --batch -f batch-byte-compile hoge.el</code>でコンパイル（-Lオプションでロードパスを追加）</li>
+</ol>
 
-<p>
-特徴は，
-</p>
-
-<ul class="org-ul">
-<li>文字コードはUTF-8
-</li>
-<li>ドキュメントクラスはjsbookで，余白や文字数などの細かい設定はしていない（デフォルトのまま）
-</li>
-<li>章ごとにTeXファイルを分割してる
-</li>
-<li>トップディレクトリにあまりファイルを置かないようにした（図とか分割TeXファイルはディレクトリの下に配置）
-</li>
-<li>参考文献にはBibTeXを使用し，登場順に列挙するようにした
-</li>
-<li>定義，補題，証明などの環境を用意した（ntheoremを使用）
-</li>
-<li>hyperrefを使ってPDFにしおりをつける
-</li>
-</ul>
-
-<p>
-とかです．コンパイルの方法とかはREADMEを見てください．PDFを作成すると以下のようになります．
-</p>
-
-<ul class="org-ul">
-<li><a href="https://dl.dropboxusercontent.com/u/608308/master-thesis-template/thesis.pdf">見本（PDFファイル）</a>
-</li>
-</ul>
-
-<h3>参考にさせていただいたページ</h3>
-
-<ul class="org-ul">
-<li><a href="http://d.hatena.ne.jp/yosshi71jp/20101210/1292005429">卒論をTeXフォーマットなしから書くためのtips - シコウサクゴ（）</a>
-</li>
-</ul>
+<p>2番の方法がラクでいいですね．</p>
 
   </article>
 

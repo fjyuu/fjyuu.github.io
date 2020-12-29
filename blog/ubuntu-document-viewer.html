@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Elispをまとめてバイトコンパイル</title>
+    <title>Ubuntuのドキュメント・ビューアをコマンドラインから</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="個人的なメモを書きます">
-    <link rel="canonical" href="http://fjyuu.info/blog/elisp-compilation">
+    <link rel="canonical" href="http://localhost:4000/blog/ubuntu-document-viewer">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
@@ -50,20 +50,17 @@
       <div class="post">
 
   <header class="post-header">
-    <h1>Elispをまとめてバイトコンパイル</h1>
-    <p class="meta">Aug 31, 2012</p>
+    <h1>Ubuntuのドキュメント・ビューアをコマンドラインから</h1>
+    <p class="meta">May 12, 2011</p>
   </header>
 
   <article class="post-content">
-  <p>ElispをコンパイルするとEmacsの起動が速くなるらしい．コンパイルの方法としては，以下があるみたい．</p>
+  <p>Ubuntuのドキュメント・ビューアの正体はEvinceなので，以下のようにコマンドラインから呼び出せます．</p>
 
-<ol>
-<li><code>M-x byte-compile-file</code>でファイルを指定してコンパイル</li>
-<li><code>C-u 0 M-x byte-recompile-directory</code>でディレクトリ以下の*.elをコンパイル</li>
-<li>コマンドラインから<code>emacs --quick --batch -f batch-byte-compile hoge.el</code>でコンパイル（-Lオプションでロードパスを追加）</li>
-</ol>
+<pre class="src src-sh">$ evince hoge.pdf
+</pre>
 
-<p>2番の方法がラクでいいですね．</p>
+<p>AdobeReaderと違って，EvinceはPDFファイルをロックしません．ファイルを開いたままそのファイルを更新できるので，TeXをPDF出力して確認したりするときには便利です．</p>
 
   </article>
 

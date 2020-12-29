@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>うこさこくん</title>
+    <title>NetworkX と D3.js を組み合わせてグラフで遊べるサービス作ってみた</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="個人的なメモを書きます">
-    <link rel="canonical" href="http://fjyuu.info/blog/uksk_kun">
+    <link rel="canonical" href="http://localhost:4000/blog/graphg">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
@@ -50,53 +50,51 @@
       <div class="post">
 
   <header class="post-header">
-    <h1>うこさこくん</h1>
-    <p class="meta">Feb 18, 2011</p>
+    <h1>NetworkX と D3.js を組み合わせてグラフで遊べるサービス作ってみた</h1>
+    <p class="meta">Oct 2, 2013</p>
   </header>
 
   <article class="post-content">
-  <p><a href="http://twitter.com/uksk_kun"><img src="/img/uksk_kun.png" alt="うこさこくん" title="" /></a></p>
+  <div class="figure">
+<p><a href="http://graphg.net/"><img src="/img/wpid-ss.png" alt="wpid-ss.png" /></a>
+</p>
+</div>
 
-<p>人工無脳ツイッターボット「うこさこくん」についてまとめます．</p>
+<p>
+いろんなグラフを作って遊べるサービス <a href="http://graphg.net/">GraphG</a> というものをリリースしました．
+</p>
 
-<p><a href="http://twitter.com/uksk_kun">@uksk_kun</a></p>
+<p>
+このサービスは以下の素晴らしいライブラリを組み合わせたものです．
+</p>
 
-<h3>うこさこくんの機能</h3>
-
-<p>基本的な機能として</p>
-
-<ul>
-<li>他人のつぶやきを参考につぶやく</li>
-<li>タイムラインやリプライに反応する</li>
-<li>フォロワーさんの特徴語（キーワード）を計算する</li>
+<ul class="org-ul">
+<li><a href="http://networkx.github.io/">NetworkX</a> ： Pythonの高機能グラフライブラリ
+</li>
+<li><a href="http://d3js.org/">D3.js</a> ： データ可視化のためのJavaScriptライブラリ
+</li>
 </ul>
 
-<p>があります．また，オマケ的な機能として</p>
+<p>
+NetworkXの<a href="http://networkx.github.io/documentation/latest/reference/generators.html">Graph Generator</a>でグラフの構造を作ってから，描画はD3.jsにまかせています．
+</p>
 
-<ul>
-<li>自動フォロー返し</li>
-<li>固有名詞に反応する</li>
-<li>夜は寝る</li>
-<li>自分の名前が入っているツイートをふぁぼる</li>
-<li><del>アイコンがたまに変わる</del></li>
+<p>
+描画には，D3.jsの<a href="https://github.com/mbostock/d3/wiki/Force-Layout">Force Layout</a>というものを利用しています．これは，グラフ描画アルゴリズムの一つで，<a href="http://byn.vc/myetr">力学モデル（Wikipedia）</a>と呼ばれるそうです．頂点をぐいぐい引っ張ったりすることができます．
+</p>
+
+<h3>作った理由</h3>
+
+<p>
+グラフの定義を，数式や言葉で説明されても分かりにくいからです．実際につくってみる事で直感的に理解することができるはず！
+</p>
+
+<h3>予定</h3>
+
+<ul class="org-ul">
+<li>他のグラフも追加したい
+</li>
 </ul>
-
-<p>があります．</p>
-
-<h3>自動フォロー返しに関する注意</h3>
-
-<p>うこさこくんは自動フォロー返しを行うときに，簡単なスパマーチェックを行っています．うこさこくんをフォローしていただいた後，しばらく（1日程度）待ってもフォローを返してくれない場合，このスパマーチェックに引っかかってる可能性があります．「スパマーじゃないですよ！」という方はお手数ですが<a href="http://twitter.com/fjyuu">@fjyuu</a>まで連絡をお願いします．</p>
-
-<h3>うこさこくん作成に当たって参考にしたページ</h3>
-
-<ul>
-<li><a href="http://shohoji.net/blog/archives/000273.html">人工無能を作ろう～マルコフ連鎖(2接頭語と1接尾語の場合)</a></li>
-<li><a href="http://is.doshisha.ac.jp/report/2008/5/22/20081110002/index.html">ベクトル空間法を利用した類似度計算</a></li>
-</ul>
-
-<h3>Thanks</h3>
-
-<p>なんとアイコンを<a href="http://twitter.com/Galland_73">@Galland_73</a>さんが描いてくれました．ありがとうございます！(2011.10.12.)</p>
 
   </article>
 
